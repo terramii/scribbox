@@ -801,9 +801,14 @@ document.addEventListener('DOMContentLoaded', () => {
     drawPoints = [coords];
     wbTip.classList.add('fade-out');
 
+    if (drawTool === 'eraser') {
+      wbCtx.globalCompositeOperation = 'destination-out';
+    } else {
+      wbCtx.globalCompositeOperation = 'source-over';
+    }
     wbCtx.beginPath();
     wbCtx.arc(coords.x, coords.y, drawSize / 2, 0, Math.PI * 2);
-    wbCtx.fillStyle = drawTool === 'eraser' ? '#ffffff' : drawColor;
+    wbCtx.fillStyle = drawColor;
     wbCtx.fill();
   }
 
@@ -833,7 +838,12 @@ document.addEventListener('DOMContentLoaded', () => {
       wbCtx.lineTo(coords.x, coords.y);
     }
 
-    wbCtx.strokeStyle = drawTool === 'eraser' ? '#ffffff' : drawColor;
+    if (drawTool === 'eraser') {
+      wbCtx.globalCompositeOperation = 'destination-out';
+    } else {
+      wbCtx.globalCompositeOperation = 'source-over';
+    }
+    wbCtx.strokeStyle = drawColor;
     wbCtx.lineWidth = drawSize;
     wbCtx.stroke();
 
@@ -1958,7 +1968,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const pred = data.prediction;
           handlePredictionResult({
             classification: pred.class,
-            confidence: 95,
+            confidence: pred.confidence || 95,
             action: pred.action,
             style: pred.style
           });

@@ -853,12 +853,31 @@ Do not include any extra text, only the raw JSON.
         res_text = response.text.strip()
         prediction = json.loads(res_text)
         
+        # Calculate real mathematical ML confidence based on prototype distance
+        predicted_class = prediction.get('class', 'unknown').strip().lower()
+        confidence = 85 # fallback
+        if predicted_class in prototypes:
+            try:
+                proto = prototypes[predicted_class]
+                grid_dist = sum((features['grid'][i] - proto['grid'][i])**2 for i in range(16))
+                aspect_dist = (features['aspectRatio'] - proto['aspectRatio'])**2
+                centroid_dist = (features['yCentroid'] - proto['yCentroid'])**2
+                symmetry_dist = (features['hSymmetry'] - proto['hSymmetry'])**2
+                symmetry_v_dist = (features['vSymmetry'] - proto['vSymmetry'])**2
+                
+                total_dist = (grid_dist + aspect_dist + centroid_dist + symmetry_dist + symmetry_v_dist)**0.5
+                # Map distance to percentage (dist = 0 -> 98%, dist >= 3.0 -> 15%)
+                confidence = max(15, min(98, round((1 - total_dist / 3.0) * 100)))
+            except Exception as dist_err:
+                print(f"Error calculating distance: {dist_err}")
+                
         return jsonify({
             'status': 'success',
             'prediction': {
-                'class': prediction.get('class', 'unknown'),
+                'class': predicted_class,
                 'action': prediction.get('action', 'Sway'),
-                'style': prediction.get('style', 'sway')
+                'style': prediction.get('style', 'sway'),
+                'confidence': confidence
             }
         })
         
