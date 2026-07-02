@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scribbox - Creative Drawing & Animation Sandbox</title>
+  <link rel="icon" type="image/png" href="image/logo.png">
+  <!-- Google Fonts for clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-left-group">
+        <div class="brand" style="display: flex; align-items: center; gap: 8px;">
+          <img src="image/logo.png" alt="Scribbox Logo" class="brand-logo" style="height: 32px; width: auto; border-radius: 6px; object-fit: contain;">
+          <h1 data-i18n="app_brand">SCRIBBOX</h1>
+        </div>
+        <button id="btn-artspaces-trigger" class="btn btn-primary btn-sm hidden" data-i18n="btn_my_artspaces">My Artspaces</button>
+        <button id="btn-new-artspace" class="btn btn-secondary btn-sm hidden" data-i18n="btn_create_artspace">Create New Artspace</button>
+        <div id="active-artspace-indicator" class="active-artspace-container">
+          <span class="active-artspace-label" data-i18n="artspace_label">Artspace:</span>
+          <span id="active-artspace-name" class="active-artspace-val" data-i18n="local_sandbox">Local Sandbox</span>
+          <button id="btn-manual-save" class="btn-manual-save hidden" title="Save Artspace" style="background: none; border: none; padding: 0; margin-left: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s;">
+            <!-- Saved Icon (cloud check as shown) -->
+            <svg id="icon-save-check" class="save-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <!-- Unsaved Icon -->
+            <svg id="icon-save-unsaved" class="save-icon hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.2 15c.7-1.2 1-2.5.7-3.9-.5-2-2.1-3.6-4.1-3.9C17 4.7 14 2 10.5 2 6.9 2 4 4.9 4 8.5c0 .3 0 .6.1.9C2.2 10.1 1 12.1 1 14.5 1 17.5 3.5 20 6.5 20h13c2.5 0 4.5-2 4.5-4.5 0-1.2-.5-2.2-1.3-3z"></path>
+              <polyline points="16 16 12 12 8 16"></polyline>
+              <line x1="12" y1="12" x2="12" y2="21"></line>
+            </svg>
+            <!-- Saving Spinner -->
+            <svg id="icon-save-spinner" class="save-icon hidden rotating" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="global-actions" style="display: flex; align-items: center; gap: 12px;">
+        <div id="user-status-container" class="user-status-bar">
+          <span id="user-display" class="user-display">Guest</span>
+          <button id="btn-auth-trigger" class="btn btn-secondary btn-sm" data-i18n="btn_login">Log In / Sign Up</button>
+          <button id="btn-logout" class="btn btn-secondary btn-sm hidden" data-i18n="btn_logout">Log Out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-workspace">
+      <!-- Upper Half: Whiteboard -->
+      <section class="panel whiteboard-panel">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="panel-title" data-i18n="whiteboard_title">1. WHITEBOARD</span>
+            <span class="panel-subtitle" data-i18n="whiteboard_subtitle">Draw on the whiteboard and drop your creation into the physics sandbox below!</span>
+          </div>
+          <div class="whiteboard-controls">
+            <!-- Brush Tool -->
+            <button id="tool-brush" class="tool-btn active" title="Brush">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+            </button>
+            <!-- Eraser Tool -->
+            <button id="tool-eraser" class="tool-btn" title="Eraser">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21Z"/><path d="M22 21H7"/><path d="m5 11 9 9"/></svg>
+            </button>
+            
+            <div class="divider-v"></div>
+ 
+            <!-- Size Slider -->
+            <div class="slider-container" title="Brush Size">
+              <span class="slider-label" data-i18n="size_label">Size</span>
+              <input type="range" id="brush-size" min="2" max="24" value="5">
+              <span id="brush-size-val" class="slider-val">5px</span>
+            </div>
+
+            <div class="divider-v"></div>
+
+            <!-- Color Palette -->
+            <div class="color-palette">
+              <button class="color-btn active" data-color="#000000" style="background-color: #000000;"></button>
+              <button class="color-btn" data-color="#4a4a4a" style="background-color: #4a4a4a;"></button>
+              <button class="color-btn" data-color="#e02424" style="background-color: #e02424;"></button>
+              <button class="color-btn" data-color="#2563eb" style="background-color: #2563eb;"></button>
+              <button class="color-btn" data-color="#059669" style="background-color: #059669;"></button>
+              <!-- Color Picker -->
+              <div class="picker-wrapper">
+                <input type="color" id="color-picker" value="#000000">
+                <button id="picker-trigger" class="color-btn picker-btn" title="Custom Color">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="divider-v"></div>
+
+            <!-- Zoom Controls -->
+            <button id="btn-wb-zoom-out" class="tool-btn" title="Zoom Out" style="width: 28px; height: 28px; padding: 0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+            <span id="wb-zoom-val" style="font-size: 0.75rem; font-weight: 600; min-width: 36px; text-align: center;">100%</span>
+            <button id="btn-wb-zoom-in" class="tool-btn" title="Zoom In" style="width: 28px; height: 28px; padding: 0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+
+            <div class="divider-v"></div>
+
+            <button id="btn-clear-board" class="btn btn-secondary" title="Clear Whiteboard" data-i18n="btn_clear">Clear</button>
+          </div>
+
+          <button id="btn-drop" class="btn btn-primary" title="Drop sketch to physics sandbox">
+            <span data-i18n="btn_drop_sandbox">Drop to Sandbox</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+          </button>
+        </div>
+
+        <div class="canvas-wrapper">
+          <canvas id="whiteboard-canvas"></canvas>
+          <div id="whiteboard-tip" class="canvas-tip" data-i18n="whiteboard_tip">Draw something here...</div>
+        </div>
+
+        <!-- Scribbie Chat Support Widget -->
+        <div id="scribbie-widget-container" class="scribbie-widget-container">
+          <!-- Welcome Speech Bubble -->
+          <div id="scribbie-welcome-bubble" class="scribbie-welcome-bubble">
+            <span class="bubble-text">I'm Scribbie, I'm here to help you sketch your idea!</span>
+            <button id="btn-close-welcome" class="btn-close-welcome" aria-label="Close message">×</button>
+          </div>
+          
+          <!-- Floating Action Button -->
+          <button id="scribbie-chat-trigger" class="scribbie-chat-trigger" title="Chat with Scribbie">
+            <img src="image/scribbie.png" alt="Scribbie Icon" class="scribbie-trigger-icon">
+          </button>
+          
+          <!-- Chat Window -->
+          <div id="scribbie-chat-window" class="scribbie-chat-window hidden">
+            <div class="chat-header">
+              <div class="chat-header-profile">
+                <img src="image/scribbie.png" alt="Scribbie Icon" class="chat-header-avatar">
+                <div class="chat-header-info">
+                  <span class="chat-header-name">Scribbie</span>
+                  <span class="chat-header-status">
+                    <span class="status-dot"></span> Online
+                  </span>
+                </div>
+              </div>
+              <button id="btn-close-chat" class="btn-close-chat" aria-label="Close Chat">×</button>
+            </div>
+            
+            <div id="chat-messages-container" class="chat-messages-container">
+              <div class="message-bubble bot-message">
+                Hi! I'm Scribbie, your Scribbox drawing guide 🎨. Ask me how to draw basic shapes, lines, or animals (like a cat 🐱 or dog 🐶), and I'll guide you step-by-step!
+              </div>
+            </div>
+            
+            <div class="chat-input-area">
+              <input type="text" id="chat-input-field" placeholder="Ask Scribbie a drawing question..." maxlength="100">
+              <button id="btn-send-chat" class="btn-send-chat" aria-label="Send message">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portal Divider -->
+      <div class="portal-divider"></div>
+
+      <!-- Lower Half: Physics Sandbox -->
+      <section class="panel sandbox-panel" style="position: relative;">
+        <!-- Floating AI Analyzer Card (outside canvas-wrapper so it doesn't scroll) -->
+        <div id="ai-card" class="ai-card hidden">
+          <div class="ai-card-header">
+            <div class="header-title-left" style="display: flex; align-items: center; gap: 6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              <span data-i18n="ai_scanner_title">AI SCANNER</span>
+            </div>
+          </div>
+
+          <!-- STATE 1: Scanning -->
+          <div id="ai-scanning-state" class="ai-card-body">
+            <div class="ai-scan-loader">
+              <div class="ai-scan-bar"></div>
+            </div>
+            <p id="ai-scan-status" class="ai-scan-status" data-i18n="ai_extracting_features">Extracting features...</p>
+          </div>
+
+          <!-- STATE 2: Confirmation (Yes / No) -->
+          <div id="ai-confirm-state" class="ai-card-body hidden">
+            <div class="ai-confirm-row">
+              <div id="ai-grid-preview" class="ai-grid-preview"></div>
+              <div class="ai-confirm-question">
+                <span class="ai-label-title" data-i18n="ai_is_guess_correct">IS MY GUESS CORRECT?</span>
+                <span id="ai-detected-label" class="ai-label-val"></span>
+                <span id="ai-confidence" class="ai-confidence-val"></span>
+              </div>
+            </div>
+            <!-- Detected body parts badge row -->
+            <div id="ai-parts-row" class="ai-parts-row hidden">
+              <span class="ai-parts-label" data-i18n="ai_parts_label">Parts:</span>
+              <div id="ai-parts-badges" class="ai-parts-badges"></div>
+            </div>
+            <div class="ai-confirm-btns">
+              <button id="btn-confirm-yes" class="btn btn-primary confirm-yes" data-i18n="btn_yes">Yes!</button>
+              <button id="btn-confirm-no" class="btn btn-secondary confirm-no" data-i18n="btn_no">No...</button>
+            </div>
+          </div>
+
+          <!-- STATE 3: Correction (manual label input) -->
+          <div id="ai-correct-state" class="ai-card-body hidden">
+            <p class="ai-correct-prompt" data-i18n="ai_correct_prompt">What did you draw? Pick a category or type below.</p>
+            <div class="ai-override-tags" id="ai-correct-tags">
+              <button class="override-tag" data-label="human" data-i18n="tag_human">👤 Human</button>
+              <button class="override-tag" data-label="cat" data-i18n="tag_cat">🐱 Cat</button>
+              <button class="override-tag" data-label="car" data-i18n="tag_car">🚗 Car</button>
+              <button class="override-tag" data-label="ball" data-i18n="tag_ball">⚽ Ball</button>
+              <button class="override-tag" data-label="spider" data-i18n="tag_spider">🕷 Spider</button>
+              <button class="override-tag" data-label="flower" data-i18n="tag_flower">🌸 Flower</button>
+              <button class="override-tag" data-label="cloud" data-i18n="tag_cloud">☁️ Cloud</button>
+              <button class="override-tag" data-label="fish" data-i18n="tag_fish">🐟 Fish</button>
+              <button class="override-tag" data-label="bird" data-i18n="tag_bird">🐦 Bird</button>
+              <button class="override-tag" data-label="tree" data-i18n="tag_tree">🌲 Tree</button>
+              <button class="override-tag" data-label="house" data-i18n="tag_house">🏠 House</button>
+              <button class="override-tag" data-label="star" data-i18n="tag_star">⭐ Star</button>
+            </div>
+            <div class="ai-custom-input-row">
+              <input type="text" id="ai-custom-label" class="ai-custom-input" placeholder="or type anything..." data-i18n-placeholder="ai_custom_input_placeholder" maxlength="24">
+              <button id="btn-custom-submit" class="btn btn-primary" data-i18n="btn_go">Go</button>
+            </div>
+          </div>
+
+          <!-- STATE 4: Confirmed — activities panel -->
+          <div id="ai-confirmed-state" class="ai-card-body hidden">
+            <div class="ai-confirmed-header">
+              <span id="ai-final-label" class="ai-final-label"></span>
+              <button id="btn-reclassify" class="btn-reclassify" title="Change classification" data-i18n="btn_change">✎ Change</button>
+            </div>
+            <div id="ai-parts-confirmed-row" class="ai-parts-row hidden">
+              <span class="ai-parts-label" data-i18n="ai_parts_label">Parts:</span>
+              <div id="ai-parts-confirmed-badges" class="ai-parts-badges"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-header">
+          <div class="sandbox-title-group">
+            <span class="panel-title" data-i18n="sandbox_title">2. PHYSICS SANDBOX</span>
+            <span id="selected-object-indicator" class="status-indicator" data-i18n="selected_sketch_none">No sketch selected</span>
+          </div>
+
+          <div class="sandbox-controls">
+            <!-- Dynamic Activity Toggles -->
+            <div id="activity-container" class="activity-group">
+              <span class="activity-label" data-i18n="activity_label">Activity:</span>
+              <span class="activity-placeholder" data-i18n="activity_placeholder_select">Select a sketch to choose activities</span>
+            </div>
+
+            <div class="divider-v"></div>
+
+            <!-- Zoom Controls -->
+            <button id="btn-sb-zoom-out" class="tool-btn" title="Zoom Out" style="width: 28px; height: 28px; padding: 0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+            <span id="sb-zoom-val" style="font-size: 0.75rem; font-weight: 600; min-width: 36px; text-align: center;">100%</span>
+            <button id="btn-sb-zoom-in" class="tool-btn" title="Zoom In" style="width: 28px; height: 28px; padding: 0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+
+            <div class="divider-v"></div>
+
+            <button id="btn-clear-sandbox" class="btn btn-secondary" title="Clear Sandbox" data-i18n="btn_clear_all">Clear All</button>
+          </div>
+        </div>
+
+        <div class="canvas-wrapper">
+          <canvas id="sandbox-canvas"></canvas>
+          <!-- Floating Edit Pencil Button -->
+          <button id="btn-edit-sketch" class="btn-edit-sketch hidden" title="Edit the sketch" aria-label="Edit the sketch">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          </button>
+          <div id="sandbox-tip" class="canvas-tip" data-i18n="sandbox_tip">Dropped sketches will fall and animate here. Drag to throw them!</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Help & Guide Selection Modal -->
+    <div id="help-modal" class="modal-overlay hidden">
+      <div class="modal-content help-modal-content" style="max-width: 440px; text-align: center; padding: 24px;">
+        <img src="image/logo.png" alt="Scribbox Logo" style="height: 52px; width: auto; margin-bottom: 16px; border-radius: 8px; object-fit: contain;">
+        <h2 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: 16px;" data-i18n="help_menu_title">Help & Guide</h2>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.4;" data-i18n="help_menu_subtitle">
+          Need help navigating Scribbox? Choose an option below to learn how to create and animate your drawings!
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
+          <button id="btn-start-interactive-guide" class="btn btn-primary" style="width: 100%; padding: 12px; font-weight: 600; font-family: var(--font-display);" data-i18n="btn_start_tour">🎬 Start Interactive Tour</button>
+          <button id="btn-view-static-help" class="btn btn-secondary" style="width: 100%; padding: 12px; font-weight: 600; font-family: var(--font-display);" data-i18n="btn_read_guidelines">📖 Read Help Guidelines</button>
+        </div>
+        <button id="help-close" class="btn btn-secondary" style="width: auto; min-width: 100px; padding: 8px 24px;" data-i18n="btn_close">Close</button>
+      </div>
+    </div>
+
+    <!-- Static Guidelines Modal -->
+    <div id="static-help-modal" class="modal-overlay hidden">
+      <div class="modal-content" style="max-width: 500px; padding: 28px;">
+        <h2 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: 16px;" data-i18n="how_to_play_title">How to Play</h2>
+        <ul style="list-style-type: none; margin-bottom: 24px; padding-left: 0;">
+          <li style="font-size: 0.85rem; margin-bottom: 12px; position: relative; padding-left: 20px; color: var(--text-primary);">
+            <strong style="font-weight: 600;" data-i18n="guideline_step1_num">Step 1:</strong> <span data-i18n="guideline_step1_text">Draw anything on the whiteboard — a human, cat, car, flower, cloud, or any creature you imagine!</span>
+          </li>
+          <li style="font-size: 0.85rem; margin-bottom: 12px; position: relative; padding-left: 20px; color: var(--text-primary);">
+            <strong style="font-weight: 600;" data-i18n="guideline_step2_num">Step 2:</strong> <span data-i18n="guideline_step2_text">Click "Drop to Sandbox". The AI scanner will analyse your drawing's shape and guess what it is.</span>
+          </li>
+          <li style="font-size: 0.85rem; margin-bottom: 12px; position: relative; padding-left: 20px; color: var(--text-primary);">
+            <strong style="font-weight: 600;" data-i18n="guideline_step3_num">Step 3:</strong> <span data-i18n="guideline_step3_text">Confirm the AI's guess with Yes or correct it with No and pick the right label.</span>
+          </li>
+          <li style="font-size: 0.85rem; margin-bottom: 12px; position: relative; padding-left: 20px; color: var(--text-primary);">
+            <strong style="font-weight: 600;" data-i18n="guideline_step4_num">Step 4:</strong> <span data-i18n="guideline_step4_text">Choose an activity from the recommended list — each class has unique animations. The AI also tries to detect body parts (legs, mouth, etc.) for smarter movement!</span>
+          </li>
+          <li style="font-size: 0.85rem; margin-bottom: 12px; position: relative; padding-left: 20px; color: var(--text-primary);">
+            <strong style="font-weight: 600;" data-i18n="guideline_step5_num">Step 5:</strong> <span data-i18n="guideline_step5_text">Need help with drawing? Ask Scribbie, our drawing assistant chatbot, by clicking the bottom-right icon in the whiteboard and entering a prompt like "how to draw a cat".</span>
+          </li>
+          <li style="font-size: 0.85rem; margin-bottom: 12px; position: relative; padding-left: 20px; color: var(--text-primary);">
+            <strong style="font-weight: 600;" data-i18n="guideline_interact_title">Interact:</strong> <span data-i18n="guideline_interact_text">Drag and throw sketches around the sandbox. They react to gravity, friction, and wall collisions.</span>
+          </li>
+        </ul>
+        <button id="static-help-close" class="btn btn-primary" style="width: 100%; padding: 10px;" data-i18n="btn_got_it">Got it!</button>
+      </div>
+    </div>
+
+    <!-- Tour Welcome Modal -->
+    <div id="tour-welcome-modal" class="modal-overlay hidden">
+      <div class="modal-content" style="max-width: 440px; text-align: center; padding: 32px;">
+        <img src="image/logo.png" alt="Scribbox Logo" style="height: 64px; width: auto; margin-bottom: 20px; border-radius: 8px; object-fit: contain;">
+        <h2 style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 12px;" data-i18n="welcome_tour_title">Welcome to Scribbox!</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 24px;" data-i18n="welcome_tour_subtitle">
+          Welcome to the creative drawing and physics animation portal! Let's take a quick 1-minute interactive tour to show you how to draw, drop, and animate your creations.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <button id="btn-welcome-start-tour" class="btn btn-primary" style="width: 100%; padding: 12px; font-weight: 600; font-family: var(--font-display);" data-i18n="btn_start_tour_short">Start Interactive Tour</button>
+          <button id="btn-welcome-skip-tour" class="btn btn-secondary" style="width: 100%; padding: 12px; font-weight: 600; font-family: var(--font-display);" data-i18n="btn_skip_explore">Skip & Explore Alone</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clear Sandbox Choice Modal -->
+    <div id="clear-sandbox-choice-modal" class="modal-overlay hidden">
+      <div class="modal-content" style="max-width: 440px; text-align: center; padding: 28px;">
+        <h2 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">Clear Sandbox</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 24px;">
+          What would you like to do with the sketches in your sandbox before clearing?
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <button id="btn-clear-choice-save" class="btn btn-primary" style="width: 100%; padding: 11px; font-weight: 600; font-family: var(--font-display);">💾 Save Artspace</button>
+          <button id="btn-clear-choice-move" class="btn btn-secondary" style="width: 100%; padding: 11px; font-weight: 600; font-family: var(--font-display); border-color: var(--accent-color);">✏️ Move to Whiteboard</button>
+          <button id="btn-clear-choice-discard" class="btn btn-danger" style="width: 100%; padding: 11px; font-weight: 600; font-family: var(--font-display); background-color: #ef4444; color: white;">🗑️ Clear & Discard</button>
+          <button id="btn-clear-choice-cancel" class="btn btn-secondary" style="width: 100%; padding: 11px; font-weight: 600; font-family: var(--font-display);">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tour Progress Card -->
+    <div id="tour-card" class="tour-card hidden">
+      <div class="tour-card-header">
+        <span id="tour-step-badge" class="tour-step-badge">Step 1 of 6</span>
+        <button id="btn-tour-skip" class="btn-tour-skip" data-i18n="btn_skip_tour">Skip Tour ×</button>
+      </div>
+      <div class="tour-card-body">
+        <p id="tour-instruction"></p>
+      </div>
+      <div class="tour-card-footer">
+        <button id="btn-tour-prev" class="btn btn-secondary btn-mini" data-i18n="btn_back">Back</button>
+        <button id="btn-tour-next" class="btn btn-primary btn-mini" data-i18n="btn_next">Next</button>
+      </div>
+    </div>
+
+    <!-- Floating Help Button -->
+    <button id="help-toggle" class="help-btn-floating" title="Show Help">?</button>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal-overlay hidden">
+      <div class="modal-content auth-modal-content">
+        <div class="auth-tabs">
+          <button id="tab-login" class="auth-tab active">Log In</button>
+          <button id="tab-signup" class="auth-tab">Sign Up</button>
+        </div>
+        
+        <!-- Login Form -->
+        <form id="login-form" class="auth-form">
+          <div class="form-group">
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username" required placeholder="Enter username" autocomplete="username">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required placeholder="Enter password" autocomplete="current-password">
+          </div>
+          <div id="login-error" class="auth-error hidden"></div>
+          <button type="submit" class="btn btn-primary auth-submit-btn">Log In</button>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signup-form" class="auth-form hidden">
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input type="text" id="signup-username" required placeholder="Choose a username" autocomplete="username">
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required placeholder="Create password (min 4 chars)" autocomplete="new-password">
+          </div>
+          <div id="signup-error" class="auth-error hidden"></div>
+          <button type="submit" class="btn btn-primary auth-submit-btn">Sign Up & Start Drawing</button>
+        </form>
+        
+        <button id="auth-close" class="btn btn-secondary auth-cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Artspaces Manager Modal -->
+    <div id="artspaces-modal" class="modal-overlay hidden">
+      <div class="modal-content artspaces-modal-content">
+        <h2>My Saved Artspaces</h2>
+        
+        <!-- Save Active Artspace Section -->
+        <div class="save-artspace-section">
+          <h3>Save Current Artspace</h3>
+          <div class="save-input-row">
+            <input type="text" id="artspace-name-input" placeholder="Name your Artspace..." maxlength="30">
+            <button id="btn-save-artspace" class="btn btn-primary">Save Workspace</button>
+          </div>
+          <div id="save-artspace-error" class="auth-error hidden"></div>
+          <div id="save-artspace-success" class="auth-success hidden"></div>
+        </div>
+
+        <hr class="modal-divider-h">
+
+        <!-- Load Saved Artspaces Section -->
+        <div class="load-artspace-section">
+          <h3>Saved Workspaces</h3>
+          <div id="artspaces-list-container" class="artspaces-list">
+            <p class="empty-list-placeholder">No saved Artspaces yet. Draw something and save it above!</p>
+          </div>
+        </div>
+
+        <button id="artspaces-close" class="btn btn-secondary close-artspaces-btn">Close</button>
+      </div>
+    </div>
+
+    <!-- Custom Action Modal -->
+    <div id="custom-action-modal" class="modal-overlay hidden">
+      <div class="modal-content auth-modal-content">
+        <h2>Add Custom Activity</h2>
+        <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 12px;">Define a new movement animation for your drawing!</p>
+        
+        <form id="custom-action-form" class="auth-form">
+          <div class="form-group">
+            <label for="custom-action-name">Activity Name</label>
+            <input type="text" id="custom-action-name" required placeholder="e.g. Twinkle, Fly, Dance..." maxlength="15">
+          </div>
+          
+          <div class="form-group">
+            <label for="custom-action-style">Movement Style</label>
+            <select id="custom-action-style" style="font-family: var(--font-body); font-size: 0.85rem; padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border-color); background-color: var(--bg-app); outline: none; color: var(--text-primary);" required>
+              <option value="jiggle">Vibrate / Jiggle 🫨</option>
+              <option value="sway">Sway / Wave 🌬️</option>
+              <option value="float">Float / Hover 🎈</option>
+              <option value="bounce">Bounce / Hop 🦘</option>
+              <option value="spin">Spin / Roll 🔄</option>
+              <option value="drive">Glide / Drive 🏎️</option>
+              <option value="pulse">Pulse / Breathe 💓</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary auth-submit-btn">Add Activity</button>
+        </form>
+        
+        <button id="custom-action-close" class="btn btn-secondary auth-cancel-btn">Cancel</button>
+      </div>
+    </div>
+
+
+
+    <!-- Custom Alert Modal -->
+    <div id="custom-alert-modal" class="modal-overlay hidden">
+      <div class="modal-content alert-modal-content" style="max-width: 400px; text-align: center; padding: 24px;">
+        <div style="font-size: 2.5rem; margin-bottom: 12px; color: var(--accent-color);">⚠️</div>
+        <h2 id="custom-alert-title" style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; font-family: var(--font-display);">Warning</h2>
+        <p id="custom-alert-message" style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;"></p>
+        <button id="btn-custom-alert-ok" class="btn btn-primary" style="width: auto; min-width: 100px; padding: 8px 24px; display: inline-flex;">OK</button>
+      </div>
+    </div>
+
+    <!-- Custom Confirm Modal -->
+    <div id="custom-confirm-modal" class="modal-overlay hidden">
+      <div class="modal-content alert-modal-content" style="max-width: 400px; text-align: center; padding: 24px;">
+        <div style="font-size: 2.5rem; margin-bottom: 12px; color: var(--accent-color);">❓</div>
+        <h2 id="custom-confirm-title" style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; font-family: var(--font-display);">Confirm</h2>
+        <p id="custom-confirm-message" style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;"></p>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+          <button id="btn-custom-confirm-yes" class="btn btn-primary" style="width: auto; min-width: 100px; padding: 8px 24px;">OK</button>
+          <button id="btn-custom-confirm-no" class="btn btn-secondary" style="width: auto; min-width: 100px; padding: 8px 24px;">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirm Create New Artspace Modal -->
+    <div id="new-artspace-confirm-modal" class="modal-overlay hidden">
+      <div class="modal-content auth-modal-content" style="max-width: 420px; text-align: center;">
+        <h2 id="new-artspace-title">Create New Artspace</h2>
+        <p id="new-artspace-message" style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.4; margin: 15px 0 25px 0;">
+          Do you want to save your current Artspace before creating a new one?
+        </p>
+        
+        <div id="new-artspace-save-input-block" class="form-group hidden" style="margin-bottom: 20px; text-align: left;">
+          <label for="new-artspace-save-name" style="font-size: 0.78rem; font-weight: 600; display: block; margin-bottom: 6px;">Artspace Name</label>
+          <input type="text" id="new-artspace-save-name" placeholder="Enter a name for your Artspace..." style="width: 100%; padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border-color); background-color: var(--bg-app); color: var(--text-primary); outline: none; box-sizing: border-box; font-family: var(--font-body); font-size: 0.85rem;">
+        </div>
+
+        <div id="new-artspace-confirm-error" class="auth-error hidden" style="margin-bottom: 15px;"></div>
+        
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <button id="btn-new-artspace-save" class="btn btn-primary" style="width: 100%; padding: 10px; font-weight: 600; font-family: var(--font-display);">Save & Continue</button>
+          <button id="btn-new-artspace-discard" class="btn btn-danger" style="width: 100%; padding: 10px; font-weight: 600; font-family: var(--font-display);">Discard & Continue</button>
+          <button id="btn-new-artspace-cancel" class="btn btn-secondary" style="width: 100%; padding: 10px; font-weight: 600; font-family: var(--font-display);">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restored Progress Choice Modal -->
+    <div id="restored-draft-modal" class="modal-overlay hidden">
+      <div class="modal-content auth-modal-content" style="max-width: 420px; text-align: center; padding: 28px;">
+        <div style="font-size: 2.5rem; margin-bottom: 12px; color: var(--accent-color);">💾</div>
+        <h2 id="restored-draft-title" style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">Unsaved Progress Restored</h2>
+        <p id="restored-draft-message" style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 24px;">
+          We found unsaved drawings from your last session. Would you like to save this progress to your account or continue editing?
+        </p>
+        
+        <div id="restored-draft-save-input-block" class="form-group hidden" style="margin-bottom: 20px; text-align: left;">
+          <label for="restored-draft-save-name" style="font-size: 0.78rem; font-weight: 600; display: block; margin-bottom: 6px;">New Artspace Name</label>
+          <input type="text" id="restored-draft-save-name" placeholder="Enter a name for your restored Artspace..." style="width: 100%; padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border-color); background-color: var(--bg-app); color: var(--text-primary); outline: none; box-sizing: border-box; font-family: var(--font-body); font-size: 0.85rem;">
+        </div>
+        
+        <div id="restored-draft-error" class="auth-error hidden" style="margin-bottom: 15px;"></div>
+        
+        <div id="restored-draft-actions" style="display: flex; flex-direction: column; gap: 10px;">
+          <!-- Logged in actions -->
+          <button id="btn-draft-save-existing" class="btn btn-primary" style="width: 100%; padding: 11px; font-weight: 600; font-family: var(--font-display);">💾 Overwrite Active Artspace</button>
+          <button id="btn-draft-save-new" class="btn btn-secondary" style="width: 100%; padding: 11px; font-weight: 600; font-family: var(--font-display); border-color: var(--accent-color);">✨ Save as New Artspace</button>
+          
+          <!-- Guest actions -->
+          <button id="btn-draft-login" class="btn btn-primary" style="width: 100%; padding: 11px; font-weight: 600; font-family: var(--font-display);">🔑 Log In to Save Progress</button>
+          
+          <!-- Common actions -->
+          <button id="btn-draft-continue" class="btn btn-secondary" style="width: 100%; padding: 11px; font-weight: 600; font-family: var(--font-display);">✏️ Just Keep Editing</button>
+          <button id="btn-draft-discard" class="btn btn-danger" style="width: 100%; padding: 11px; font-weight: 600; font-family: var(--font-display); background-color: #ef4444; color: white;">🗑️ Discard Progress</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=1.0.2"></script>
+</body>
+</html>

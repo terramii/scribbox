@@ -1,0 +1,2417 @@
+{
+  "aircraftcarrier": {
+    "object": "aircraft carrier",
+    "category": "Vehicle",
+    "action": "Sail/Float",
+    "style": "float",
+    "notes": "Vertical sine bob + slight rotation sway synced to water surface, continuous loop"
+  },
+  "airplane": {
+    "object": "airplane",
+    "category": "Vehicle",
+    "action": "Fly",
+    "style": "float",
+    "notes": "Move along bezier path, bank/rotate into turns, optional rotor or propeller spin loop"
+  },
+  "alarmclock": {
+    "object": "alarm clock",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "ambulance": {
+    "object": "ambulance",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "angel": {
+    "object": "angel",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "animalmigration": {
+    "object": "animal migration",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "ant": {
+    "object": "ant",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "anvil": {
+    "object": "anvil",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "apple": {
+    "object": "apple",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "arm": {
+    "object": "arm",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "asparagus": {
+    "object": "asparagus",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "axe": {
+    "object": "axe",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "backpack": {
+    "object": "backpack",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "banana": {
+    "object": "banana",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "bandage": {
+    "object": "bandage",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "barn": {
+    "object": "barn",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "baseball": {
+    "object": "baseball",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "baseballbat": {
+    "object": "baseball bat",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "basket": {
+    "object": "basket",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "basketball": {
+    "object": "basketball",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "bat": {
+    "object": "bat",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "bathtub": {
+    "object": "bathtub",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "beach": {
+    "object": "beach",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "bear": {
+    "object": "bear",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "beard": {
+    "object": "beard",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "bed": {
+    "object": "bed",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "bee": {
+    "object": "bee",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "belt": {
+    "object": "belt",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "bench": {
+    "object": "bench",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "bicycle": {
+    "object": "bicycle",
+    "category": "Vehicle",
+    "action": "Ride",
+    "style": "drive",
+    "notes": "Wheels and pedals rotate in sync, rider body bobs slightly with pedal stroke"
+  },
+  "binoculars": {
+    "object": "binoculars",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "bird": {
+    "object": "bird",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "birthdaycake": {
+    "object": "birthday cake",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "blackberry": {
+    "object": "blackberry",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "blueberry": {
+    "object": "blueberry",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "book": {
+    "object": "book",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "boomerang": {
+    "object": "boomerang",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "bottlecap": {
+    "object": "bottlecap",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "bowtie": {
+    "object": "bowtie",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "bracelet": {
+    "object": "bracelet",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "brain": {
+    "object": "brain",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "bread": {
+    "object": "bread",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "bridge": {
+    "object": "bridge",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "broccoli": {
+    "object": "broccoli",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "broom": {
+    "object": "broom",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "bucket": {
+    "object": "bucket",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "bulldozer": {
+    "object": "bulldozer",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "bus": {
+    "object": "bus",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "bush": {
+    "object": "bush",
+    "category": "Nature",
+    "action": "Sway",
+    "style": "sway",
+    "notes": "Base fixed, upper portion rotates gently side to side (sine wave), secondary leaf flutter optional"
+  },
+  "butterfly": {
+    "object": "butterfly",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "cactus": {
+    "object": "cactus",
+    "category": "Nature",
+    "action": "Sway",
+    "style": "sway",
+    "notes": "Base fixed, upper portion rotates gently side to side (sine wave), secondary leaf flutter optional"
+  },
+  "cake": {
+    "object": "cake",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "calculator": {
+    "object": "calculator",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "calendar": {
+    "object": "calendar",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "camel": {
+    "object": "camel",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "camera": {
+    "object": "camera",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "camouflage": {
+    "object": "camouflage",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "campfire": {
+    "object": "campfire",
+    "category": "Nature",
+    "action": "Flicker",
+    "style": "sway",
+    "notes": "Randomized scale/skew noise per frame on flame shape, fast loop, optional warm color flicker"
+  },
+  "candle": {
+    "object": "candle",
+    "category": "Nature",
+    "action": "Flicker",
+    "style": "sway",
+    "notes": "Randomized scale/skew noise per frame on flame shape, fast loop, optional warm color flicker"
+  },
+  "cannon": {
+    "object": "cannon",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "canoe": {
+    "object": "canoe",
+    "category": "Vehicle",
+    "action": "Sail/Float",
+    "style": "float",
+    "notes": "Vertical sine bob + slight rotation sway synced to water surface, continuous loop"
+  },
+  "car": {
+    "object": "car",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "carrot": {
+    "object": "carrot",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "castle": {
+    "object": "castle",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "cat": {
+    "object": "cat",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "ceilingfan": {
+    "object": "ceiling fan",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "cello": {
+    "object": "cello",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "cellphone": {
+    "object": "cell phone",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "chair": {
+    "object": "chair",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "chandelier": {
+    "object": "chandelier",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "church": {
+    "object": "church",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "circle": {
+    "object": "circle",
+    "category": "Shape",
+    "action": "Draw-in / Morph",
+    "style": "pulse",
+    "notes": "Path drawn progressively via stroke-dashoffset animation, then settles into a gentle scale pulse loop"
+  },
+  "clarinet": {
+    "object": "clarinet",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "clock": {
+    "object": "clock",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "cloud": {
+    "object": "cloud",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "coffeecup": {
+    "object": "coffee cup",
+    "category": "Food",
+    "action": "Steam/Pour",
+    "style": "sway",
+    "notes": "Wavy vertical steam lines fading upward on loop; or tilt rotation for pour action with liquid arc"
+  },
+  "compass": {
+    "object": "compass",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "computer": {
+    "object": "computer",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "cookie": {
+    "object": "cookie",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "cooler": {
+    "object": "cooler",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "couch": {
+    "object": "couch",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "cow": {
+    "object": "cow",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "crab": {
+    "object": "crab",
+    "category": "Animal",
+    "action": "Swim",
+    "style": "float",
+    "notes": "Sine-wave body squash traveling along spine, fins/limbs flutter as secondary motion, continuous loop"
+  },
+  "crayon": {
+    "object": "crayon",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "crocodile": {
+    "object": "crocodile",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "crown": {
+    "object": "crown",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "cruiseship": {
+    "object": "cruise ship",
+    "category": "Vehicle",
+    "action": "Sail/Float",
+    "style": "float",
+    "notes": "Vertical sine bob + slight rotation sway synced to water surface, continuous loop"
+  },
+  "cup": {
+    "object": "cup",
+    "category": "Food",
+    "action": "Steam/Pour",
+    "style": "sway",
+    "notes": "Wavy vertical steam lines fading upward on loop; or tilt rotation for pour action with liquid arc"
+  },
+  "diamond": {
+    "object": "diamond",
+    "category": "Shape",
+    "action": "Draw-in / Morph",
+    "style": "pulse",
+    "notes": "Path drawn progressively via stroke-dashoffset animation, then settles into a gentle scale pulse loop"
+  },
+  "dishwasher": {
+    "object": "dishwasher",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "divingboard": {
+    "object": "diving board",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "dog": {
+    "object": "dog",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "dolphin": {
+    "object": "dolphin",
+    "category": "Animal",
+    "action": "Swim",
+    "style": "float",
+    "notes": "Sine-wave body squash traveling along spine, fins/limbs flutter as secondary motion, continuous loop"
+  },
+  "donut": {
+    "object": "donut",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "door": {
+    "object": "door",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "dragon": {
+    "object": "dragon",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "dresser": {
+    "object": "dresser",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "drill": {
+    "object": "drill",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "drums": {
+    "object": "drums",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "duck": {
+    "object": "duck",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "dumbbell": {
+    "object": "dumbbell",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "ear": {
+    "object": "ear",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "elbow": {
+    "object": "elbow",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "elephant": {
+    "object": "elephant",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "envelope": {
+    "object": "envelope",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "eraser": {
+    "object": "eraser",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "eye": {
+    "object": "eye",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "eyeglasses": {
+    "object": "eyeglasses",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "face": {
+    "object": "face",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "fan": {
+    "object": "fan",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "feather": {
+    "object": "feather",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "fence": {
+    "object": "fence",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "finger": {
+    "object": "finger",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "firehydrant": {
+    "object": "fire hydrant",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "fireplace": {
+    "object": "fireplace",
+    "category": "Nature",
+    "action": "Flicker",
+    "style": "sway",
+    "notes": "Randomized scale/skew noise per frame on flame shape, fast loop, optional warm color flicker"
+  },
+  "firetruck": {
+    "object": "firetruck",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "fish": {
+    "object": "fish",
+    "category": "Animal",
+    "action": "Swim",
+    "style": "float",
+    "notes": "Sine-wave body squash traveling along spine, fins/limbs flutter as secondary motion, continuous loop"
+  },
+  "flamingo": {
+    "object": "flamingo",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "flashlight": {
+    "object": "flashlight",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "flipflops": {
+    "object": "flip flops",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "floorlamp": {
+    "object": "floor lamp",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "flower": {
+    "object": "flower",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "flyingsaucer": {
+    "object": "flying saucer",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "foot": {
+    "object": "foot",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "fork": {
+    "object": "fork",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "frog": {
+    "object": "frog",
+    "category": "Animal",
+    "action": "Hop",
+    "style": "bounce",
+    "notes": "Crouch (squash) -> launch (stretch) -> arc -> land (squash), repeat forward in arcs"
+  },
+  "fryingpan": {
+    "object": "frying pan",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "garden": {
+    "object": "garden",
+    "category": "Nature",
+    "action": "Sway",
+    "style": "sway",
+    "notes": "Base fixed, upper portion rotates gently side to side (sine wave), secondary leaf flutter optional"
+  },
+  "gardenhose": {
+    "object": "garden hose",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "giraffe": {
+    "object": "giraffe",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "goatee": {
+    "object": "goatee",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "golfclub": {
+    "object": "golf club",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "grapes": {
+    "object": "grapes",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "grass": {
+    "object": "grass",
+    "category": "Nature",
+    "action": "Sway",
+    "style": "sway",
+    "notes": "Base fixed, upper portion rotates gently side to side (sine wave), secondary leaf flutter optional"
+  },
+  "guitar": {
+    "object": "guitar",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "hamburger": {
+    "object": "hamburger",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "hammer": {
+    "object": "hammer",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "hand": {
+    "object": "hand",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "harp": {
+    "object": "harp",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "hat": {
+    "object": "hat",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "headphones": {
+    "object": "headphones",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "hedgehog": {
+    "object": "hedgehog",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "helicopter": {
+    "object": "helicopter",
+    "category": "Vehicle",
+    "action": "Fly",
+    "style": "float",
+    "notes": "Move along bezier path, bank/rotate into turns, optional rotor or propeller spin loop"
+  },
+  "helmet": {
+    "object": "helmet",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "hexagon": {
+    "object": "hexagon",
+    "category": "Shape",
+    "action": "Draw-in / Morph",
+    "style": "pulse",
+    "notes": "Path drawn progressively via stroke-dashoffset animation, then settles into a gentle scale pulse loop"
+  },
+  "hockeypuck": {
+    "object": "hockey puck",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "hockeystick": {
+    "object": "hockey stick",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "horse": {
+    "object": "horse",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "hospital": {
+    "object": "hospital",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "hotairballoon": {
+    "object": "hot air balloon",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "hotdog": {
+    "object": "hot dog",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "hottub": {
+    "object": "hot tub",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "hourglass": {
+    "object": "hourglass",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "house": {
+    "object": "house",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "houseplant": {
+    "object": "house plant",
+    "category": "Nature",
+    "action": "Sway",
+    "style": "sway",
+    "notes": "Base fixed, upper portion rotates gently side to side (sine wave), secondary leaf flutter optional"
+  },
+  "hurricane": {
+    "object": "hurricane",
+    "category": "Nature",
+    "action": "Flow/Swirl",
+    "style": "sway",
+    "notes": "Looping motion path (wave travel or rotational swirl depending on shape), continuous, adjustable speed"
+  },
+  "icecream": {
+    "object": "ice cream",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "jacket": {
+    "object": "jacket",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "jail": {
+    "object": "jail",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "kangaroo": {
+    "object": "kangaroo",
+    "category": "Animal",
+    "action": "Hop",
+    "style": "bounce",
+    "notes": "Crouch (squash) -> launch (stretch) -> arc -> land (squash), repeat forward in arcs"
+  },
+  "key": {
+    "object": "key",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "keyboard": {
+    "object": "keyboard",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "knee": {
+    "object": "knee",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "knife": {
+    "object": "knife",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "ladder": {
+    "object": "ladder",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "lantern": {
+    "object": "lantern",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "laptop": {
+    "object": "laptop",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "leaf": {
+    "object": "leaf",
+    "category": "Nature",
+    "action": "Sway",
+    "style": "sway",
+    "notes": "Base fixed, upper portion rotates gently side to side (sine wave), secondary leaf flutter optional"
+  },
+  "leg": {
+    "object": "leg",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "lightbulb": {
+    "object": "light bulb",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "lighter": {
+    "object": "lighter",
+    "category": "Nature",
+    "action": "Flicker",
+    "style": "sway",
+    "notes": "Randomized scale/skew noise per frame on flame shape, fast loop, optional warm color flicker"
+  },
+  "lighthouse": {
+    "object": "lighthouse",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "lightning": {
+    "object": "lightning",
+    "category": "Nature",
+    "action": "Glow/Pulse",
+    "style": "pulse",
+    "notes": "Subtle scale/opacity oscillation on loop, optional rotating highlight or twinkle particles"
+  },
+  "line": {
+    "object": "line",
+    "category": "Shape",
+    "action": "Draw-in / Morph",
+    "style": "pulse",
+    "notes": "Path drawn progressively via stroke-dashoffset animation, then settles into a gentle scale pulse loop"
+  },
+  "lion": {
+    "object": "lion",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "lipstick": {
+    "object": "lipstick",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "lobster": {
+    "object": "lobster",
+    "category": "Animal",
+    "action": "Swim",
+    "style": "float",
+    "notes": "Sine-wave body squash traveling along spine, fins/limbs flutter as secondary motion, continuous loop"
+  },
+  "lollipop": {
+    "object": "lollipop",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "mailbox": {
+    "object": "mailbox",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "map": {
+    "object": "map",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "marker": {
+    "object": "marker",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "matches": {
+    "object": "matches",
+    "category": "Nature",
+    "action": "Flicker",
+    "style": "sway",
+    "notes": "Randomized scale/skew noise per frame on flame shape, fast loop, optional warm color flicker"
+  },
+  "megaphone": {
+    "object": "megaphone",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "mermaid": {
+    "object": "mermaid",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "microphone": {
+    "object": "microphone",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "microwave": {
+    "object": "microwave",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "monkey": {
+    "object": "monkey",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "moon": {
+    "object": "moon",
+    "category": "Nature",
+    "action": "Glow/Pulse",
+    "style": "pulse",
+    "notes": "Subtle scale/opacity oscillation on loop, optional rotating highlight or twinkle particles"
+  },
+  "mosquito": {
+    "object": "mosquito",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "motorbike": {
+    "object": "motorbike",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "mountain": {
+    "object": "mountain",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "mouse": {
+    "object": "mouse",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "moustache": {
+    "object": "moustache",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "mouth": {
+    "object": "mouth",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "mug": {
+    "object": "mug",
+    "category": "Food",
+    "action": "Steam/Pour",
+    "style": "sway",
+    "notes": "Wavy vertical steam lines fading upward on loop; or tilt rotation for pour action with liquid arc"
+  },
+  "mushroom": {
+    "object": "mushroom",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "nail": {
+    "object": "nail",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "necklace": {
+    "object": "necklace",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "nose": {
+    "object": "nose",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "ocean": {
+    "object": "ocean",
+    "category": "Nature",
+    "action": "Flow/Swirl",
+    "style": "sway",
+    "notes": "Looping motion path (wave travel or rotational swirl depending on shape), continuous, adjustable speed"
+  },
+  "octagon": {
+    "object": "octagon",
+    "category": "Shape",
+    "action": "Draw-in / Morph",
+    "style": "pulse",
+    "notes": "Path drawn progressively via stroke-dashoffset animation, then settles into a gentle scale pulse loop"
+  },
+  "octopus": {
+    "object": "octopus",
+    "category": "Animal",
+    "action": "Swim",
+    "style": "float",
+    "notes": "Sine-wave body squash traveling along spine, fins/limbs flutter as secondary motion, continuous loop"
+  },
+  "onion": {
+    "object": "onion",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "oven": {
+    "object": "oven",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "owl": {
+    "object": "owl",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "paintbrush": {
+    "object": "paintbrush",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "paintcan": {
+    "object": "paint can",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "palmtree": {
+    "object": "palm tree",
+    "category": "Nature",
+    "action": "Sway",
+    "style": "sway",
+    "notes": "Base fixed, upper portion rotates gently side to side (sine wave), secondary leaf flutter optional"
+  },
+  "panda": {
+    "object": "panda",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "pants": {
+    "object": "pants",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "paperclip": {
+    "object": "paper clip",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "parachute": {
+    "object": "parachute",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "parrot": {
+    "object": "parrot",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "passport": {
+    "object": "passport",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "peanut": {
+    "object": "peanut",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "pear": {
+    "object": "pear",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "peas": {
+    "object": "peas",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "pencil": {
+    "object": "pencil",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "penguin": {
+    "object": "penguin",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "piano": {
+    "object": "piano",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "pickuptruck": {
+    "object": "pickup truck",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "pictureframe": {
+    "object": "picture frame",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "pig": {
+    "object": "pig",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "pillow": {
+    "object": "pillow",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "pineapple": {
+    "object": "pineapple",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "pizza": {
+    "object": "pizza",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "pliers": {
+    "object": "pliers",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "policecar": {
+    "object": "police car",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "pond": {
+    "object": "pond",
+    "category": "Nature",
+    "action": "Flow/Swirl",
+    "style": "sway",
+    "notes": "Looping motion path (wave travel or rotational swirl depending on shape), continuous, adjustable speed"
+  },
+  "pool": {
+    "object": "pool",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "popsicle": {
+    "object": "popsicle",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "postcard": {
+    "object": "postcard",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "potato": {
+    "object": "potato",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "poweroutlet": {
+    "object": "power outlet",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "purse": {
+    "object": "purse",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "rabbit": {
+    "object": "rabbit",
+    "category": "Animal",
+    "action": "Hop",
+    "style": "bounce",
+    "notes": "Crouch (squash) -> launch (stretch) -> arc -> land (squash), repeat forward in arcs"
+  },
+  "raccoon": {
+    "object": "raccoon",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "radio": {
+    "object": "radio",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "rain": {
+    "object": "rain",
+    "category": "Nature",
+    "action": "Flow/Swirl",
+    "style": "sway",
+    "notes": "Looping motion path (wave travel or rotational swirl depending on shape), continuous, adjustable speed"
+  },
+  "rainbow": {
+    "object": "rainbow",
+    "category": "Nature",
+    "action": "Glow/Pulse",
+    "style": "pulse",
+    "notes": "Subtle scale/opacity oscillation on loop, optional rotating highlight or twinkle particles"
+  },
+  "rake": {
+    "object": "rake",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "remotecontrol": {
+    "object": "remote control",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "rhinoceros": {
+    "object": "rhinoceros",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "rifle": {
+    "object": "rifle",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "river": {
+    "object": "river",
+    "category": "Nature",
+    "action": "Flow/Swirl",
+    "style": "sway",
+    "notes": "Looping motion path (wave travel or rotational swirl depending on shape), continuous, adjustable speed"
+  },
+  "rollercoaster": {
+    "object": "roller coaster",
+    "category": "Vehicle",
+    "action": "Roll/Glide",
+    "style": "float",
+    "notes": "Continuous rotation of wheels, body follows path with slight lean into curves"
+  },
+  "rollerskates": {
+    "object": "rollerskates",
+    "category": "Vehicle",
+    "action": "Roll/Glide",
+    "style": "float",
+    "notes": "Continuous rotation of wheels, body follows path with slight lean into curves"
+  },
+  "sailboat": {
+    "object": "sailboat",
+    "category": "Vehicle",
+    "action": "Sail/Float",
+    "style": "float",
+    "notes": "Vertical sine bob + slight rotation sway synced to water surface, continuous loop"
+  },
+  "sandwich": {
+    "object": "sandwich",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "saw": {
+    "object": "saw",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "saxophone": {
+    "object": "saxophone",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "schoolbus": {
+    "object": "school bus",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "scissors": {
+    "object": "scissors",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "scorpion": {
+    "object": "scorpion",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "screwdriver": {
+    "object": "screwdriver",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "seaturtle": {
+    "object": "sea turtle",
+    "category": "Animal",
+    "action": "Swim",
+    "style": "float",
+    "notes": "Sine-wave body squash traveling along spine, fins/limbs flutter as secondary motion, continuous loop"
+  },
+  "seesaw": {
+    "object": "see saw",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "shark": {
+    "object": "shark",
+    "category": "Animal",
+    "action": "Swim",
+    "style": "float",
+    "notes": "Sine-wave body squash traveling along spine, fins/limbs flutter as secondary motion, continuous loop"
+  },
+  "sheep": {
+    "object": "sheep",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "shoe": {
+    "object": "shoe",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "shorts": {
+    "object": "shorts",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "shovel": {
+    "object": "shovel",
+    "category": "Tool",
+    "action": "Use motion",
+    "style": "sway",
+    "notes": "Pivot rotation (swing tools) or back-and-forth translation (stroke tools), short loop, fast ease-out"
+  },
+  "sink": {
+    "object": "sink",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "skateboard": {
+    "object": "skateboard",
+    "category": "Vehicle",
+    "action": "Roll/Glide",
+    "style": "float",
+    "notes": "Continuous rotation of wheels, body follows path with slight lean into curves"
+  },
+  "skull": {
+    "object": "skull",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "skyscraper": {
+    "object": "skyscraper",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "sleepingbag": {
+    "object": "sleeping bag",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "smileyface": {
+    "object": "smiley face",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "snail": {
+    "object": "snail",
+    "category": "Animal",
+    "action": "Crawl",
+    "style": "bounce",
+    "notes": "Very slow horizontal drift with subtle body compress/extend (inchworm-style), looped"
+  },
+  "snake": {
+    "object": "snake",
+    "category": "Animal",
+    "action": "Slither",
+    "style": "sway",
+    "notes": "Sine wave moves along the body spline from head to tail, no legs, continuous loop"
+  },
+  "snorkel": {
+    "object": "snorkel",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "snowflake": {
+    "object": "snowflake",
+    "category": "Nature",
+    "action": "Glow/Pulse",
+    "style": "pulse",
+    "notes": "Subtle scale/opacity oscillation on loop, optional rotating highlight or twinkle particles"
+  },
+  "snowman": {
+    "object": "snowman",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "soccerball": {
+    "object": "soccer ball",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "sock": {
+    "object": "sock",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "speedboat": {
+    "object": "speedboat",
+    "category": "Vehicle",
+    "action": "Sail/Float",
+    "style": "float",
+    "notes": "Vertical sine bob + slight rotation sway synced to water surface, continuous loop"
+  },
+  "spider": {
+    "object": "spider",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "spoon": {
+    "object": "spoon",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "spreadsheet": {
+    "object": "spreadsheet",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "square": {
+    "object": "square",
+    "category": "Shape",
+    "action": "Draw-in / Morph",
+    "style": "pulse",
+    "notes": "Path drawn progressively via stroke-dashoffset animation, then settles into a gentle scale pulse loop"
+  },
+  "squiggle": {
+    "object": "squiggle",
+    "category": "Shape",
+    "action": "Draw-in / Morph",
+    "style": "pulse",
+    "notes": "Path drawn progressively via stroke-dashoffset animation, then settles into a gentle scale pulse loop"
+  },
+  "squirrel": {
+    "object": "squirrel",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "stairs": {
+    "object": "stairs",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "star": {
+    "object": "star",
+    "category": "Shape",
+    "action": "Draw-in / Morph",
+    "style": "pulse",
+    "notes": "Path drawn progressively via stroke-dashoffset animation, then settles into a gentle scale pulse loop"
+  },
+  "steak": {
+    "object": "steak",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "stereo": {
+    "object": "stereo",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "stethoscope": {
+    "object": "stethoscope",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "stitches": {
+    "object": "stitches",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "stopsign": {
+    "object": "stop sign",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "stove": {
+    "object": "stove",
+    "category": "Nature",
+    "action": "Flicker",
+    "style": "sway",
+    "notes": "Randomized scale/skew noise per frame on flame shape, fast loop, optional warm color flicker"
+  },
+  "strawberry": {
+    "object": "strawberry",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "streetlight": {
+    "object": "streetlight",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "stringbean": {
+    "object": "string bean",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "submarine": {
+    "object": "submarine",
+    "category": "Vehicle",
+    "action": "Sail/Float",
+    "style": "float",
+    "notes": "Vertical sine bob + slight rotation sway synced to water surface, continuous loop"
+  },
+  "suitcase": {
+    "object": "suitcase",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "sun": {
+    "object": "sun",
+    "category": "Nature",
+    "action": "Glow/Pulse",
+    "style": "pulse",
+    "notes": "Subtle scale/opacity oscillation on loop, optional rotating highlight or twinkle particles"
+  },
+  "swan": {
+    "object": "swan",
+    "category": "Animal",
+    "action": "Fly",
+    "style": "float",
+    "notes": "4-6 frame wing up-down loop, slight body bob, move along a free-form bezier path"
+  },
+  "sweater": {
+    "object": "sweater",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "swingset": {
+    "object": "swing set",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "sword": {
+    "object": "sword",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "syringe": {
+    "object": "syringe",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "table": {
+    "object": "table",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "teapot": {
+    "object": "teapot",
+    "category": "Food",
+    "action": "Steam/Pour",
+    "style": "sway",
+    "notes": "Wavy vertical steam lines fading upward on loop; or tilt rotation for pour action with liquid arc"
+  },
+  "teddy-bear": {
+    "object": "teddy-bear",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "telephone": {
+    "object": "telephone",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "television": {
+    "object": "television",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "tennisracquet": {
+    "object": "tennis racquet",
+    "category": "Sport",
+    "action": "Bounce/Swing",
+    "style": "sway",
+    "notes": "Ball items: gravity arc bounce with squash/stretch; equipment: pivot swing motion, short loop"
+  },
+  "tent": {
+    "object": "tent",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "theeiffeltower": {
+    "object": "The Eiffel Tower",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "thegreatwallofchina": {
+    "object": "The Great Wall of China",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "themonalisa": {
+    "object": "The Mona Lisa",
+    "category": "Landmark/Building",
+    "action": "Ambient idle",
+    "style": "sway",
+    "notes": "Mostly static; add one subtle looping detail (e.g., light twinkle, flag flap, cloud drift behind) for life"
+  },
+  "tiger": {
+    "object": "tiger",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "toaster": {
+    "object": "toaster",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "toe": {
+    "object": "toe",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "toilet": {
+    "object": "toilet",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "tooth": {
+    "object": "tooth",
+    "category": "Body Part",
+    "action": "Wiggle/Gesture",
+    "style": "sway",
+    "notes": "Small rotation or scale oscillation isolated to the part (e.g., blink, bend, wiggle), short loop"
+  },
+  "toothbrush": {
+    "object": "toothbrush",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "toothpaste": {
+    "object": "toothpaste",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "tornado": {
+    "object": "tornado",
+    "category": "Nature",
+    "action": "Flow/Swirl",
+    "style": "sway",
+    "notes": "Looping motion path (wave travel or rotational swirl depending on shape), continuous, adjustable speed"
+  },
+  "tractor": {
+    "object": "tractor",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "trafficlight": {
+    "object": "traffic light",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "train": {
+    "object": "train",
+    "category": "Vehicle",
+    "action": "Move",
+    "style": "drive",
+    "notes": "Wheels rotate continuously, steady horizontal path, slight chain-link sway if multiple cars"
+  },
+  "tree": {
+    "object": "tree",
+    "category": "Nature",
+    "action": "Sway",
+    "style": "sway",
+    "notes": "Base fixed, upper portion rotates gently side to side (sine wave), secondary leaf flutter optional"
+  },
+  "triangle": {
+    "object": "triangle",
+    "category": "Shape",
+    "action": "Draw-in / Morph",
+    "style": "pulse",
+    "notes": "Path drawn progressively via stroke-dashoffset animation, then settles into a gentle scale pulse loop"
+  },
+  "trombone": {
+    "object": "trombone",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "truck": {
+    "object": "truck",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "trumpet": {
+    "object": "trumpet",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "t-shirt": {
+    "object": "t-shirt",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "umbrella": {
+    "object": "umbrella",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "underwear": {
+    "object": "underwear",
+    "category": "Wearable",
+    "action": "Sway",
+    "style": "float",
+    "notes": "Gentle sway or bounce loop as if worn/carried; add sparkle pulse for jewelry-type items"
+  },
+  "van": {
+    "object": "van",
+    "category": "Vehicle",
+    "action": "Drive",
+    "style": "drive",
+    "notes": "Continuous wheel spin, body moves along path, slight suspension bob on bumps"
+  },
+  "vase": {
+    "object": "vase",
+    "category": "Furniture",
+    "action": "Idle/Use transition",
+    "style": "sway",
+    "notes": "Mostly static; for interactive pieces (swing, see-saw, drawer) use eased back-and-forth motion"
+  },
+  "violin": {
+    "object": "violin",
+    "category": "Instrument",
+    "action": "Play/Vibrate",
+    "style": "pulse",
+    "notes": "Short repeating strike/strum motion or surface vibration ripple synced to a beat interval"
+  },
+  "washingmachine": {
+    "object": "washing machine",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "watermelon": {
+    "object": "watermelon",
+    "category": "Food",
+    "action": "Wobble",
+    "style": "pulse",
+    "notes": "Gentle scale pulse (1.0 to 1.05) or slight rotation wobble, slow loop, optional steam/sparkle if hot"
+  },
+  "waterslide": {
+    "object": "waterslide",
+    "category": "Nature",
+    "action": "Flow/Swirl",
+    "style": "sway",
+    "notes": "Looping motion path (wave travel or rotational swirl depending on shape), continuous, adjustable speed"
+  },
+  "whale": {
+    "object": "whale",
+    "category": "Animal",
+    "action": "Swim",
+    "style": "float",
+    "notes": "Sine-wave body squash traveling along spine, fins/limbs flutter as secondary motion, continuous loop"
+  },
+  "wheel": {
+    "object": "wheel",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "windmill": {
+    "object": "windmill",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "winebottle": {
+    "object": "wine bottle",
+    "category": "Food",
+    "action": "Steam/Pour",
+    "style": "sway",
+    "notes": "Wavy vertical steam lines fading upward on loop; or tilt rotation for pour action with liquid arc"
+  },
+  "wineglass": {
+    "object": "wine glass",
+    "category": "Food",
+    "action": "Steam/Pour",
+    "style": "sway",
+    "notes": "Wavy vertical steam lines fading upward on loop; or tilt rotation for pour action with liquid arc"
+  },
+  "wristwatch": {
+    "object": "wristwatch",
+    "category": "Electronic",
+    "action": "Activate",
+    "style": "pulse",
+    "notes": "Short opacity blink on a light/screen element, or button scale-press feedback, brief loop"
+  },
+  "yoga": {
+    "object": "yoga",
+    "category": "Object",
+    "action": "Idle highlight",
+    "style": "pulse",
+    "notes": "Gentle scale oscillation 1.0x-1.03x on loop, ease-in-out, draws attention without implying specific motion"
+  },
+  "zebra": {
+    "object": "zebra",
+    "category": "Animal",
+    "action": "Walk",
+    "style": "bounce",
+    "notes": "4-8 frame leg-alternation loop with slight vertical body bob; tail/ears as secondary motion"
+  },
+  "zigzag": {
+    "object": "zigzag",
+    "category": "Shape",
+    "action": "Draw-in / Morph",
+    "style": "pulse",
+    "notes": "Path drawn progressively via stroke-dashoffset animation, then settles into a gentle scale pulse loop"
+  }
+}
