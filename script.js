@@ -2312,7 +2312,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sandboxObjects.forEach(obj => {
       // --- Suspended State before Confirmation ---
-      if (obj.classificationStatus !== 'confirmed') {
+      if (obj.classificationStatus !== 'confirmed' && obj.activity !== 'pulling') {
         obj.time++;
         if (obj.isDragging) {
           obj.vx = 0;
