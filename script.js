@@ -868,23 +868,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Whiteboard Cursor Helper ---
   function updateWhiteboardCursor() {
-    const size = Math.max(6, drawSize);
+    const size = drawSize + 4;
     const radius = drawSize / 2;
     const center = size / 2;
     
     if (drawTool === 'eraser') {
-      const half = drawSize / 2;
+      const x = 2;
       const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}' viewBox='0 0 ${size} ${size}'>
-        <rect x='${center - half}' y='${center - half}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23ffffff' stroke-width='1.5'/>
-        <rect x='${center - half}' y='${center - half}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23111827' stroke-width='0.5'/>
+        <rect x='${x}' y='${x}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23ffffff' stroke-width='1.5'/>
+        <rect x='${x}' y='${x}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23111827' stroke-width='0.5'/>
       </svg>`;
-      wbCanvas.style.cursor = `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}") ${center} ${center}, cell`;
+      wbCanvas.style.cursor = `url("data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}") ${center} ${center}, cell`;
     } else {
       const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}' viewBox='0 0 ${size} ${size}'>
         <circle cx='${center}' cy='${center}' r='${radius}' fill='none' stroke='%23ffffff' stroke-width='1.5'/>
         <circle cx='${center}' cy='${center}' r='${radius}' fill='none' stroke='%23111827' stroke-width='0.5'/>
       </svg>`;
-      wbCanvas.style.cursor = `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}") ${center} ${center}, crosshair`;
+      wbCanvas.style.cursor = `url("data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}") ${center} ${center}, crosshair`;
     }
   }
 
