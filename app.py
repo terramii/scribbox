@@ -110,7 +110,7 @@ try:
     import psycopg2
     import psycopg2.extras
     HAS_POSTGRES = True
-except ImportError as e:
+except Exception as e:
     HAS_POSTGRES = False
     print(f"Warning: Failed to import psycopg2: {e}")
 
@@ -259,7 +259,10 @@ def init_db():
         conn.commit()
 
 # Run database initialization
-init_db()
+try:
+    init_db()
+except Exception as e:
+    print(f"Warning: Database initialization failed: {e}")
 
 def calculate_prototypes():
     """
