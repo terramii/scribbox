@@ -868,12 +868,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Whiteboard Cursor Helper ---
   function updateWhiteboardCursor() {
-    const size = drawSize + 4;
+    const size = Math.round(drawSize + 4);
     const radius = drawSize / 2;
-    const center = size / 2;
+    const center = Math.round(size / 2);
     
     if (drawTool === 'eraser') {
-      const x = 2;
+      const x = Math.round(center - drawSize / 2);
       const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}' viewBox='0 0 ${size} ${size}'>
         <rect x='${x}' y='${x}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23ffffff' stroke-width='1.5'/>
         <rect x='${x}' y='${x}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23111827' stroke-width='0.5'/>
