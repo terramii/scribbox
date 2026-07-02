@@ -124,13 +124,6 @@ When answering:
 6. End with an inspiring, artistic encouraging sign-off (e.g., "Happy sketching! ✏️✨", "You've got this, future artist! 🌈").
 """
 
-drawing_faq_agent = Agent(
-    name="drawing_faq_agent",
-    model=Gemini(model="gemini-2.5-flash"),
-    instruction=DRAWING_FAQ_INSTRUCTION,
-    description="Guides beginners on how to draw basic shapes, lines, shading, proportions, animals, etc."
-)
-
 DECLINE_INSTRUCTION = """You are Scribbie, a friendly support representative for Scribbox — 
 a creative drawing app for beginners.
 
