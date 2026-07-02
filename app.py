@@ -23,6 +23,8 @@ import sys
 import importlib.util
 
 my_adk_agent = None
+IMPORT_ERROR = None
+IMPORT_ERROR_TRACE = None
 try:
     agent_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'my-agent', 'app', 'agent.py'))
     spec = importlib.util.spec_from_file_location("my_adk_agent", agent_path)
@@ -33,6 +35,9 @@ try:
     HAS_ADK_AGENT = (root_agent is not None)
     print("ADK Classifier agent successfully loaded using importlib!")
 except Exception as e:
+    import traceback
+    IMPORT_ERROR = str(e)
+    IMPORT_ERROR_TRACE = traceback.format_exc()
     print(f"Warning: Failed to import ADK root_agent: {e}")
     HAS_ADK_AGENT = False
 
@@ -891,7 +896,8 @@ def scribbie_support():
                 return Response(fallback_generator(), mimetype='text/event-stream')
             else:
                 def error_generator():
-                    yield f"data: {json.dumps({'error': 'Scribbie drawing support is currently unavailable.'})}\n\n"
+                    err_msg = f"Scribbie drawing support is currently unavailable. Import error: {IMPORT_ERROR}. Trace: {IMPORT_ERROR_TRACE}" if IMPORT_ERROR else "Scribbie drawing support is currently unavailable."
+                    yield f"data: {json.dumps({'error': err_msg})}\n\n"
                 return Response(error_generator(), mimetype='text/event-stream')
         
         def stream_generator():
