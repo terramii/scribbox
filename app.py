@@ -105,20 +105,107 @@ DEFAULT_PROTOTYPES = {
     }
 }
 
+# ----------------- Database Configuration & Adapters -----------------
+import psycopg2
+import psycopg2.extras
+
+DATABASE_URL = os.environ.get("DATABASE_URL") or os.environ.get("POSTGRES_URL")
+
+class DbCursorWrapper:
+    def __init__(self, cursor, is_postgres=False):
+        self.cursor = cursor
+        self.is_postgres = is_postgres
+        self._lastrowid = None
+        
+    def execute(self, query, params=None):
+        if params is None:
+            params = ()
+        if self.is_postgres:
+            # Convert ? to %s for PostgreSQL
+            query = query.replace('?', '%s')
+            # Handle returning id for inserts
+            is_insert = query.strip().upper().startswith("INSERT")
+            if is_insert and "RETURNING" not in query.upper():
+                query = query.rstrip('; ') + " RETURNING id"
+                self.cursor.execute(query, params)
+                try:
+                    self._lastrowid = self.cursor.fetchone()[0]
+                except Exception:
+                    self._lastrowid = None
+                return self
+                
+        self.cursor.execute(query, params)
+        if not self.is_postgres:
+            self._lastrowid = getattr(self.cursor, 'lastrowid', None)
+        return self
+        
+    def fetchone(self):
+        return self.cursor.fetchone()
+        
+    def fetchall(self):
+        return self.cursor.fetchall()
+        
+    @property
+    def lastrowid(self):
+        return self._lastrowid
+        
+    def __iter__(self):
+        return iter(self.cursor)
+        
+    def __getattr__(self, name):
+        return getattr(self.cursor, name)
+
+class DbConnectionWrapper:
+    def __init__(self, conn, is_postgres=False):
+        self.conn = conn
+        self.is_postgres = is_postgres
+        
+    def cursor(self):
+        return DbCursorWrapper(self.conn.cursor(), self.is_postgres)
+        
+    def execute(self, query, params=None):
+        cursor = self.cursor()
+        cursor.execute(query, params)
+        return cursor
+        
+    def commit(self):
+        self.conn.commit()
+        
+    def rollback(self):
+        self.conn.rollback()
+        
+    def close(self):
+        self.conn.close()
+        
+    def __enter__(self):
+        self.conn.__enter__()
+        return self
+        
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.conn.__exit__(exc_type, exc_val, exc_tb)
+
 def get_db():
-    conn = sqlite3.connect(DATABASE)
-    conn.row_factory = sqlite3.Row
-    # Enable WAL mode for better concurrency and larger write support
-    conn.execute('PRAGMA journal_mode=WAL')
-    conn.execute('PRAGMA synchronous=NORMAL')
-    return conn
+    if DATABASE_URL:
+        url = DATABASE_URL
+        if url.startswith("postgres://"):
+            url = url.replace("postgres://", "postgresql://", 1)
+        conn = psycopg2.connect(url, cursor_factory=psycopg2.extras.DictCursor)
+        return DbConnectionWrapper(conn, is_postgres=True)
+    else:
+        conn = sqlite3.connect(DATABASE)
+        conn.row_factory = sqlite3.Row
+        # Enable WAL mode for better concurrency and larger write support
+        conn.execute('PRAGMA journal_mode=WAL')
+        conn.execute('PRAGMA synchronous=NORMAL')
+        return DbConnectionWrapper(conn, is_postgres=False)
 
 def init_db():
     with get_db() as conn:
-        # Corrections table for ML feedback
-        conn.execute('''
+        id_type = "SERIAL PRIMARY KEY" if conn.is_postgres else "INTEGER PRIMARY KEY AUTOINCREMENT"
+        
+        conn.execute(f'''
             CREATE TABLE IF NOT EXISTS corrections (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {id_type},
                 label TEXT NOT NULL,
                 custom_label TEXT,
                 grid TEXT NOT NULL,
@@ -135,19 +222,19 @@ def init_db():
             conn.execute('ALTER TABLE corrections ADD COLUMN parts TEXT')
         except Exception:
             pass
-        # Users table
-        conn.execute('''
+            
+        conn.execute(f'''
             CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {id_type},
                 username TEXT UNIQUE NOT NULL,
                 password_hash TEXT NOT NULL,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')
-        # Artspaces table
-        conn.execute('''
+        
+        conn.execute(f'''
             CREATE TABLE IF NOT EXISTS artspaces (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {id_type},
                 user_id INTEGER NOT NULL,
                 name TEXT NOT NULL,
                 whiteboard_data TEXT NOT NULL,
