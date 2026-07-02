@@ -868,23 +868,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Whiteboard Cursor Helper ---
   function updateWhiteboardCursor() {
-    const size = Math.max(16, Math.round(drawSize + 4));
-    const radius = drawSize / 2;
-    const center = Math.round(size / 2);
-    
     if (drawTool === 'eraser') {
-      const x = Math.round(center - drawSize / 2);
-      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}' viewBox='0 0 ${size} ${size}'>
-        <rect x='${x}' y='${x}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23ffffff' stroke-width='1.5'/>
-        <rect x='${x}' y='${x}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23111827' stroke-width='0.5'/>
-      </svg>`;
-      wbCanvas.style.cursor = `url("data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}") ${center} ${center}, cell`;
+      wbCanvas.style.cursor = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><rect x='3' y='3' width='14' height='14' fill='none' stroke='%23ffffff' stroke-width='3' rx='2'/><rect x='3' y='3' width='14' height='14' fill='none' stroke='%23111827' stroke-width='1.5' rx='2'/></svg>") 10 10, cell`;
     } else {
-      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}' viewBox='0 0 ${size} ${size}'>
-        <circle cx='${center}' cy='${center}' r='${radius}' fill='none' stroke='%23ffffff' stroke-width='1.5'/>
-        <circle cx='${center}' cy='${center}' r='${radius}' fill='none' stroke='%23111827' stroke-width='0.5'/>
-      </svg>`;
-      wbCanvas.style.cursor = `url("data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}") ${center} ${center}, crosshair`;
+      wbCanvas.style.cursor = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><circle cx='8' cy='8' r='3.5' fill='%23ffffff'/><circle cx='8' cy='8' r='2' fill='%23111827'/></svg>") 8 8, crosshair`;
     }
   }
 
