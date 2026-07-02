@@ -868,7 +868,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Whiteboard Cursor Helper ---
   function updateWhiteboardCursor() {
-    const size = Math.round(drawSize + 4);
+    const size = Math.max(16, Math.round(drawSize + 4));
     const radius = drawSize / 2;
     const center = Math.round(size / 2);
     
