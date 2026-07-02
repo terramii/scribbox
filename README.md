@@ -4,6 +4,8 @@ Scribbox is a premium, interactive AI Sketchbook that blends creative hand-drawn
 
 Scribbox features **Scribbie**—a friendly, child-focused drawing tutor agent who provides step-by-step drawing guides, and a high-tech **AI Scanner** that analyzes your drawings.
 
+🔗 **Try the live app here:** [https://scribbox.vercel.app/](https://scribbox.vercel.app/)
+
 ---
 
 ## 🌟 Key Features
