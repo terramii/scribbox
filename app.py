@@ -10,8 +10,11 @@ app = Flask(__name__, static_folder='.', static_url_path='')
 # Use a stable secret key for session encryption
 app.secret_key = 'sketchbox_secure_cookie_key_98765'
 # Allow large artspace saves (each object canvas is a base64 PNG, can be several MB)
-app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50 MB
-DATABASE = 'database.db'
+# Use /tmp directory on Vercel because the root directory is read-only
+if os.environ.get('VERCEL') or os.environ.get('NOW_REGION'):
+    DATABASE = '/tmp/database.db'
+else:
+    DATABASE = 'database.db'
 
 from dotenv import load_dotenv
 load_dotenv()
