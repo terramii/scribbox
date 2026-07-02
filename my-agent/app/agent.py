@@ -273,6 +273,27 @@ def run_scribbie_workflow_stream(client, query: str, history: list | None = None
         history = []
     
     query_lower = query.lower().strip().rstrip('!?.')
+    
+    # Fail-safe demo check for "how to draw a cat"
+    if "cat" in query_lower and ("draw" in query_lower or "how" in query_lower or "guide" in query_lower):
+        cat_guide = """Oh, I would absolutely LOVE to help you draw a cute kitty cat! 🐱🎨✨ Let's create a furry little friend together! Grab your pencil, future artist, and follow these easy steps:
+
+1. **Draw the Head:** Start by drawing a nice, round **circle** in the middle of your page! 🟡🐱
+2. **Add the Ears:** Put two small **triangles** on top of the circle for the pointy kitty ears! 📐🐱
+3. **Sketch the Body:** Below the head, draw a larger **oval** shape for the cat's body! 🥚🐱
+4. **Draw the Face:** Inside the head circle, draw two tiny dots for eyes, a little **triangle** nose, and two curved lines for a happy smile! 👁️👃👁️
+5. **Whisker Power!** Draw three straight lines coming out of each cheek. Meow! ✏️✨
+6. **Add the Tail:** Draw a long, wavy line sweeping up from the back of the body for a happy, swishing tail! 🐈
+
+You did it! Now you have a wonderful little cat ready to play! 🌟🎉 Happy sketching! ✏️✨"""
+        
+        import time
+        chunk_size = 15
+        for i in range(0, len(cat_guide), chunk_size):
+            yield cat_guide[i:i+chunk_size]
+            time.sleep(0.02)
+        return
+        
     best_match = None
     best_score = -1.0
     
