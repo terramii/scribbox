@@ -868,23 +868,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Whiteboard Cursor Helper ---
   function updateWhiteboardCursor() {
-    const size = Math.max(6, drawSize);
+    const size = Math.max(8, drawSize);
     const radius = drawSize / 2;
     const center = size / 2;
+    let svg = '';
     
     if (drawTool === 'eraser') {
       const half = drawSize / 2;
-      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}' viewBox='0 0 ${size} ${size}'>
-        <rect x='${center - half}' y='${center - half}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23ffffff' stroke-width='1.5'/>
-        <rect x='${center - half}' y='${center - half}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23111827' stroke-width='0.5'/>
+      svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+        <rect x="${center - half}" y="${center - half}" width="${drawSize}" height="${drawSize}" fill="none" stroke="#ffffff" stroke-width="2"/>
+        <rect x="${center - half}" y="${center - half}" width="${drawSize}" height="${drawSize}" fill="none" stroke="#000000" stroke-width="1"/>
       </svg>`;
-      wbCanvas.style.cursor = `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}") ${center} ${center}, cell`;
+      const base64Svg = btoa(svg.trim());
+      wbCanvas.style.cursor = `url("data:image/svg+xml;base64,${base64Svg}") ${center} ${center}, cell`;
     } else {
-      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}' viewBox='0 0 ${size} ${size}'>
-        <circle cx='${center}' cy='${center}' r='${radius}' fill='none' stroke='%23ffffff' stroke-width='1.5'/>
-        <circle cx='${center}' cy='${center}' r='${radius}' fill='none' stroke='%23111827' stroke-width='0.5'/>
+      svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+        <circle cx="${center}" cy="${center}" r="${radius}" fill="none" stroke="#ffffff" stroke-width="2"/>
+        <circle cx="${center}" cy="${center}" r="${radius}" fill="none" stroke="#000000" stroke-width="1"/>
       </svg>`;
-      wbCanvas.style.cursor = `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}") ${center} ${center}, crosshair`;
+      const base64Svg = btoa(svg.trim());
+      wbCanvas.style.cursor = `url("data:image/svg+xml;base64,${base64Svg}") ${center} ${center}, crosshair`;
     }
   }
 
