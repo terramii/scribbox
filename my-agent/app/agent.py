@@ -1,11 +1,15 @@
 # ruff: noqa
 import os
 import json
-import openpyxl
-from google.adk.agents import Agent
-from google.adk.apps import App
-from google.adk.models import Gemini
 from google.genai import types
+
+try:
+    from google.adk.agents import Agent
+    from google.adk.apps import App
+    from google.adk.models import Gemini
+    HAS_ADK = True
+except ImportError:
+    HAS_ADK = False
 
 # ===========================================================================
 # 1. Original Sketchbox Classifier (DO NOT CHANGE)
@@ -40,54 +44,69 @@ You MUST respond in JSON format matching this schema:
 }}
 """
 
-root_agent = Agent(
-    name="sketchbox_classifier",
-    model=Gemini(
-        model="gemini-2.5-flash",
-        config=types.GenerateContentConfig(
-            response_mime_type="application/json",
-            temperature=0.2
+if HAS_ADK:
+    try:
+        root_agent = Agent(
+            name="sketchbox_classifier",
+            model=Gemini(
+                model="gemini-2.5-flash",
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.2
+                )
+            ),
+            instruction=SYSTEM_INSTRUCTION
         )
-    ),
-    instruction=SYSTEM_INSTRUCTION
-)
-
-app = App(
-    root_agent=root_agent,
-    name="sketchbox_app",
-)
+        
+        app = App(
+            root_agent=root_agent,
+            name="sketchbox_app",
+        )
+    except Exception as e:
+        print(f"Warning: Failed to initialize ADK Agent/App: {e}")
+        root_agent = None
+        app = None
+else:
+    root_agent = None
+    app = None
 
 
 # ===========================================================================
 # 2. Scribbie Drawing Guide Support Agents (New ADK 2.0 Additions)
 # ===========================================================================
 
-# Load Scribbie Drawing Guide Dataset
-DATASET_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'Scribbie_Drawing_Guide_Dataset.xlsx'))
+# Load Scribbie Drawing Guide Dataset from pre-converted JSON (extremely fast startup)
+JSON_DATASET_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'Scribbie_Drawing_Guides.json'))
 DRAWING_GUIDES = {}
 
 try:
-    wb = openpyxl.load_workbook(DATASET_PATH, read_only=True)
-    sheet = wb.active
-    rows = list(sheet.iter_rows(values_only=True))
-    if rows:
-        headers = rows[0]
-        # category, object, intent_examples, difficulty, drawing_guide, tips, reference_keywords, out_of_scope_response
-        for row in rows[1:]:
-            if not row[1]:
-                continue
-            obj_name = str(row[1]).strip().lower()
-            DRAWING_GUIDES[obj_name] = {
-                'category': row[0],
-                'intent_examples': row[2],
-                'difficulty': row[3],
-                'guide': row[4],
-                'tips': row[5],
-                'keywords': row[6],
-                'out_of_scope': row[7]
-            }
+    if os.path.exists(JSON_DATASET_PATH):
+        with open(JSON_DATASET_PATH, 'r', encoding='utf-8') as f:
+            DRAWING_GUIDES = json.load(f)
+    else:
+        # Fallback if JSON doesn't exist
+        print(f"Warning: JSON dataset not found at {JSON_DATASET_PATH}, attempting Excel...")
+        DATASET_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'Scribbie_Drawing_Guide_Dataset.xlsx'))
+        if os.path.exists(DATASET_PATH):
+            wb = openpyxl.load_workbook(DATASET_PATH, read_only=True)
+            sheet = wb.active
+            rows = list(sheet.iter_rows(values_only=True))
+            if rows:
+                for row in rows[1:]:
+                    if not row[1]:
+                        continue
+                    obj_name = str(row[1]).strip().lower()
+                    DRAWING_GUIDES[obj_name] = {
+                        'category': row[0],
+                        'intent_examples': row[2],
+                        'difficulty': row[3],
+                        'guide': row[4],
+                        'tips': row[5],
+                        'keywords': row[6],
+                        'out_of_scope': row[7]
+                    }
 except Exception as e:
-    print(f"Warning: Failed to load Scribbie_Drawing_Guide_Dataset: {e}")
+    print(f"Warning: Failed to load Scribbie Drawing Guide Dataset: {e}")
 
 
 DRAWING_FAQ_INSTRUCTION = """You are a super playful, enthusiastic, and friendly drawing and sketching guide named Scribbie 🎨✨!

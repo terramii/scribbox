@@ -1,0 +1,4942 @@
+{
+  "non_physics": [
+    "hot air balloon",
+    "blimp",
+    "parachute",
+    "zeppelin",
+    "leaf",
+    "petal",
+    "seed",
+    "snowflake",
+    "feather",
+    "bubble",
+    "star",
+    "moon",
+    "sun",
+    "cloud",
+    "rain",
+    "rainbow",
+    "lightning",
+    "hurricane",
+    "tornado",
+    "planet",
+    "comet",
+    "meteor",
+    "asteroid",
+    "satellite",
+    "galaxy",
+    "aurora",
+    "nebula",
+    "black hole",
+    "flying saucer",
+    "kite",
+    "balloon"
+  ],
+  "classes_meta": {
+    "cat": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "dog": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "horse": {
+      "action": "Gallop",
+      "style": "4-beat extended gait, full stretch",
+      "physics": "Physics"
+    },
+    "cow": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "pig": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "sheep": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "goat": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "rabbit": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "fox": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "wolf": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "bear": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "lion": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "tiger": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "cheetah": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "leopard": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "elephant": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "rhinoceros": {
+      "action": "Charge",
+      "style": "Fast aggressive run + lean",
+      "physics": "Physics"
+    },
+    "hippopotamus": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "giraffe": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "zebra": {
+      "action": "Gallop",
+      "style": "4-beat extended gait, full stretch",
+      "physics": "Physics"
+    },
+    "kangaroo": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "koala": {
+      "action": "Climb",
+      "style": "Alternating grip + pull upward",
+      "physics": "Physics"
+    },
+    "panda": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "raccoon": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "skunk": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "beaver": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "otter": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "squirrel": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "chipmunk": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "hedgehog": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "mole": {
+      "action": "Dig",
+      "style": "Repeated downward scoop",
+      "physics": "Physics"
+    },
+    "armadillo": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "anteater": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "sloth": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "gorilla": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "chimpanzee": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "orangutan": {
+      "action": "Climb",
+      "style": "Alternating grip + pull upward",
+      "physics": "Physics"
+    },
+    "baboon": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "lemur": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "deer": {
+      "action": "Trot",
+      "style": "Medium-speed diagonal gait",
+      "physics": "Physics"
+    },
+    "moose": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "elk": {
+      "action": "Gallop",
+      "style": "4-beat extended gait, full stretch",
+      "physics": "Physics"
+    },
+    "bison": {
+      "action": "Charge",
+      "style": "Fast aggressive run + lean",
+      "physics": "Physics"
+    },
+    "camel": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "llama": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "alpaca": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "donkey": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "mule": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "buffalo": {
+      "action": "Charge",
+      "style": "Fast aggressive run + lean",
+      "physics": "Physics"
+    },
+    "boar": {
+      "action": "Charge",
+      "style": "Fast aggressive run + lean",
+      "physics": "Physics"
+    },
+    "warthog": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "hyena": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "meerkat": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "mongoose": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "badger": {
+      "action": "Dig",
+      "style": "Repeated downward scoop",
+      "physics": "Physics"
+    },
+    "weasel": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "ferret": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "rat": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "mouse": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "hamster": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "guinea pig": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "porcupine": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "pangolin": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "aardvark": {
+      "action": "Dig",
+      "style": "Repeated downward scoop",
+      "physics": "Physics"
+    },
+    "tapir": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "capybara": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "platypus": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "walrus": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "seal": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "polar bear": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "snow leopard": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "jaguar": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "cougar": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "lynx": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "ocelot": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "dingo": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "coyote": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "jackal": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "mink": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "stoat": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "reindeer": {
+      "action": "Gallop",
+      "style": "4-beat extended gait, full stretch",
+      "physics": "Physics"
+    },
+    "antelope": {
+      "action": "Gallop",
+      "style": "4-beat extended gait, full stretch",
+      "physics": "Physics"
+    },
+    "gazelle": {
+      "action": "Gallop",
+      "style": "4-beat extended gait, full stretch",
+      "physics": "Physics"
+    },
+    "wildebeest": {
+      "action": "Gallop",
+      "style": "4-beat extended gait, full stretch",
+      "physics": "Physics"
+    },
+    "ibex": {
+      "action": "Climb",
+      "style": "Alternating grip + pull upward",
+      "physics": "Physics"
+    },
+    "mountain goat": {
+      "action": "Climb",
+      "style": "Alternating grip + pull upward",
+      "physics": "Physics"
+    },
+    "yak": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "bactrian camel": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "red panda": {
+      "action": "Climb",
+      "style": "Alternating grip + pull upward",
+      "physics": "Physics"
+    },
+    "kinkajou": {
+      "action": "Climb",
+      "style": "Alternating grip + pull upward",
+      "physics": "Physics"
+    },
+    "binturong": {
+      "action": "Climb",
+      "style": "Alternating grip + pull upward",
+      "physics": "Physics"
+    },
+    "caracal": {
+      "action": "Jump",
+      "style": "Single leap arc",
+      "physics": "Physics"
+    },
+    "serval": {
+      "action": "Jump",
+      "style": "Single leap arc",
+      "physics": "Physics"
+    },
+    "manul": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "numbat": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "quokka": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "wombat": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "tasmanian devil": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "echidna": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "fish": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "shark": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "whale": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "dolphin": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "octopus": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "squid": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "jellyfish": {
+      "action": "Float",
+      "style": "Bobbing on water surface",
+      "physics": "Physics"
+    },
+    "sea turtle": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "crab": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "lobster": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "shrimp": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "seahorse": {
+      "action": "Float",
+      "style": "Bobbing on water surface",
+      "physics": "Physics"
+    },
+    "clownfish": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "stingray": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "manta ray": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "swordfish": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "tuna": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "salmon": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "trout": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "eel": {
+      "action": "Slither",
+      "style": "Traveling S-curve body wave",
+      "physics": "Physics"
+    },
+    "moray eel": {
+      "action": "Slither",
+      "style": "Traveling S-curve body wave",
+      "physics": "Physics"
+    },
+    "starfish": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "sea urchin": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "clam": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "oyster": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "snail": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "slug": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "mussel": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "manatee": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "narwhal": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "beluga whale": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "orca": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "sea lion": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "penguin": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "pufferfish": {
+      "action": "Inflate",
+      "style": "Scale grow + bob",
+      "physics": "Physics"
+    },
+    "anglerfish": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "piranha": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "barracuda": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "sea horse": {
+      "action": "Float",
+      "style": "Bobbing on water surface",
+      "physics": "Physics"
+    },
+    "hermit crab": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "bird": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "eagle": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "hawk": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "falcon": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Physics"
+    },
+    "owl": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "parrot": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "toucan": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "flamingo": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "peacock": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "crane": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "heron": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "stork": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "pelican": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "seagull": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "albatross": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "crow": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "raven": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "sparrow": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "robin": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "finch": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "canary": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "cardinal": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "hummingbird": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Physics"
+    },
+    "woodpecker": {
+      "action": "Peck",
+      "style": "Quick head dip + retract",
+      "physics": "Physics"
+    },
+    "kingfisher": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Physics"
+    },
+    "duck": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "goose": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "swan": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "ostrich": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "emu": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "kiwi": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "cassowary": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "puffin": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "cockatoo": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "macaw": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "dove": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "pigeon": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "bat": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "snake": {
+      "action": "Slither",
+      "style": "Traveling S-curve body wave",
+      "physics": "Physics"
+    },
+    "cobra": {
+      "action": "Slither",
+      "style": "Traveling S-curve body wave",
+      "physics": "Physics"
+    },
+    "python": {
+      "action": "Slither",
+      "style": "Traveling S-curve body wave",
+      "physics": "Physics"
+    },
+    "anaconda": {
+      "action": "Slither",
+      "style": "Traveling S-curve body wave",
+      "physics": "Physics"
+    },
+    "rattlesnake": {
+      "action": "Slither",
+      "style": "Traveling S-curve body wave",
+      "physics": "Physics"
+    },
+    "gecko": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "chameleon": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "iguana": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "komodo dragon": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "monitor lizard": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "crocodile": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "alligator": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "tortoise": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "turtle": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "frog": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "toad": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "salamander": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "axolotl": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "newt": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "caiman": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "ant": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "bee": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Physics"
+    },
+    "butterfly": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "moth": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "mosquito": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Physics"
+    },
+    "dragonfly": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Physics"
+    },
+    "beetle": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "ladybug": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "grasshopper": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "cricket": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "cockroach": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "termite": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "firefly": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Physics"
+    },
+    "wasp": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Physics"
+    },
+    "hornet": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Physics"
+    },
+    "mantis": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "stick insect": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "caterpillar": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "worm": {
+      "action": "Slither",
+      "style": "Traveling S-curve body wave",
+      "physics": "Physics"
+    },
+    "centipede": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "millipede": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "scorpion": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "spider": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "tarantula": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "tick": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "louse": {
+      "action": "Crawl",
+      "style": "Low belly-drag or inching motion",
+      "physics": "Physics"
+    },
+    "flea": {
+      "action": "Hop",
+      "style": "Bounce arc, squash & stretch",
+      "physics": "Physics"
+    },
+    "earwig": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "aphid": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "weevil": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "dinosaur": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "t-rex": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "triceratops": {
+      "action": "Charge",
+      "style": "Fast aggressive run + lean",
+      "physics": "Physics"
+    },
+    "velociraptor": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "brachiosaurus": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "pterodactyl": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "stegosaurus": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "ankylosaurus": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "mammoth": {
+      "action": "Walk",
+      "style": "Heavy weighted gait, ground impact",
+      "physics": "Physics"
+    },
+    "saber-toothed tiger": {
+      "action": "Run",
+      "style": "Fast gait with flight phase",
+      "physics": "Physics"
+    },
+    "dragon": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "unicorn": {
+      "action": "Gallop",
+      "style": "4-beat extended gait, full stretch",
+      "physics": "Physics"
+    },
+    "griffin": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "phoenix": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "pegasus": {
+      "action": "Fly",
+      "style": "Wing flap cycle + path travel",
+      "physics": "Physics"
+    },
+    "kraken": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "hydra": {
+      "action": "Slither",
+      "style": "Traveling S-curve body wave",
+      "physics": "Physics"
+    },
+    "cerberus": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "minotaur": {
+      "action": "Charge",
+      "style": "Fast aggressive run + lean",
+      "physics": "Physics"
+    },
+    "centaur": {
+      "action": "Gallop",
+      "style": "4-beat extended gait, full stretch",
+      "physics": "Physics"
+    },
+    "car": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "truck": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "bus": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "van": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "motorcycle": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "scooter": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "bicycle": {
+      "action": "Ride",
+      "style": "Pedal + wheel rotation",
+      "physics": "Physics"
+    },
+    "tricycle": {
+      "action": "Ride",
+      "style": "Pedal + wheel rotation",
+      "physics": "Physics"
+    },
+    "ambulance": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "firetruck": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "police car": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "taxi": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "limousine": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "pickup truck": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "suv": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "jeep": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "tractor": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "bulldozer": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "excavator": {
+      "action": "Walk",
+      "style": "Mechanical stepped gait",
+      "physics": "Physics"
+    },
+    "crane truck": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "forklift": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "dump truck": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "cement mixer": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "garbage truck": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "school bus": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "double-decker bus": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "tram": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "trolleybus": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "go-kart": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "quad bike": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "snowmobile": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "golf cart": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "segway": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "skateboard": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "rollerskates": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "roller coaster": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "tank": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "armored vehicle": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "race car": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "monster truck": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "airplane": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "helicopter": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "hot air balloon": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "blimp": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "glider": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "biplane": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "fighter jet": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "rocket": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "space shuttle": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "parachute": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "hang glider": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "drone": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "zeppelin": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "paraglider": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "ultralight": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "seaplane": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "boat": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "sailboat": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "yacht": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "cruise ship": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "aircraft carrier": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "submarine": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "speedboat": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "canoe": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "kayak": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "rowboat": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "ferry": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "tugboat": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "hovercraft": {
+      "action": "Float",
+      "style": "Bobbing on water surface",
+      "physics": "Physics"
+    },
+    "jet ski": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "catamaran": {
+      "action": "Sail",
+      "style": "Bobbing float + wind fill",
+      "physics": "Physics"
+    },
+    "raft": {
+      "action": "Float",
+      "style": "Bobbing on water surface",
+      "physics": "Physics"
+    },
+    "train": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "subway": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "monorail": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "steam train": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "freight train": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "bullet train": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "apple": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "banana": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "orange": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "grape": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "strawberry": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "watermelon": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "pineapple": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "mango": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "kiwi fruit": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "peach": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "pear": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "cherry": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "blueberry": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "raspberry": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "blackberry": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "lemon": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "lime": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "coconut": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "papaya": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "guava": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "fig": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "date": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "plum": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "apricot": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "pomegranate": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "melon": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "avocado": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "dragonfruit": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "passion fruit": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "lychee": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "carrot": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "broccoli": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "onion": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "potato": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "tomato": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "corn": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "lettuce": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "cucumber": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "peas": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "beans": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "pumpkin": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "zucchini": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "eggplant": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "bell pepper": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "celery": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "asparagus": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "garlic": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "ginger": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "mushroom": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "cabbage": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "spinach": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "kale": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "beetroot": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "radish": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "sweet potato": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "artichoke": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "leek": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "cauliflower": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "brussels sprout": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "string bean": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "pizza": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "hamburger": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "hot dog": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "sandwich": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "taco": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "burrito": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "sushi": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "ramen": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "pasta": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "steak": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "fried chicken": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "fish and chips": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "salad": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "soup": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "bread": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "croissant": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "bagel": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "pretzel": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "popcorn": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "nachos": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "french fries": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "egg": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "bacon": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "pancake": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "waffle": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "rice": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "dumplings": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "spring roll": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "curry": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "kebab": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "cake": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "cupcake": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "ice cream": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "donut": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "cookie": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "brownie": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "macaron": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "eclair": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "cheesecake": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "pudding": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "jelly": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "muffin": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "lollipop": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "candy": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "chocolate bar": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "gummy bear": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "marshmallow": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "popsicle": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "birthday cake": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "tart": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "crepe": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "tiramisu": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "coffee cup": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "teapot": {
+      "action": "Pour",
+      "style": "Tilt rotation + liquid arc",
+      "physics": "Physics"
+    },
+    "wine glass": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "beer mug": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "juice glass": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "smoothie": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "milkshake": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "water bottle": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "soda can": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "cocktail glass": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "mug": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "thermos": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "flask": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "wine bottle": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "champagne glass": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "coconut drink": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "hammer": {
+      "action": "Chop/Strike",
+      "style": "Overhead swing arc",
+      "physics": "Physics"
+    },
+    "screwdriver": {
+      "action": "Spin/Drill",
+      "style": "Rapid axial rotation",
+      "physics": "Physics"
+    },
+    "wrench": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "pliers": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "drill": {
+      "action": "Spin/Drill",
+      "style": "Rapid axial rotation",
+      "physics": "Physics"
+    },
+    "saw": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "axe": {
+      "action": "Chop/Strike",
+      "style": "Overhead swing arc",
+      "physics": "Physics"
+    },
+    "chisel": {
+      "action": "Chop/Strike",
+      "style": "Overhead swing arc",
+      "physics": "Physics"
+    },
+    "mallet": {
+      "action": "Chop/Strike",
+      "style": "Overhead swing arc",
+      "physics": "Physics"
+    },
+    "crowbar": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "level": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "tape measure": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "ruler": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "square tool": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "clamp": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "vise": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "bolt": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "nut": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "nail": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "screw": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "staple gun": {
+      "action": "Chop/Strike",
+      "style": "Overhead swing arc",
+      "physics": "Physics"
+    },
+    "rivet": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "soldering iron": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "wire cutter": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "hacksaw": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "jigsaw": {
+      "action": "Spin/Drill",
+      "style": "Rapid axial rotation",
+      "physics": "Physics"
+    },
+    "circular saw": {
+      "action": "Spin/Drill",
+      "style": "Rapid axial rotation",
+      "physics": "Physics"
+    },
+    "angle grinder": {
+      "action": "Spin/Drill",
+      "style": "Rapid axial rotation",
+      "physics": "Physics"
+    },
+    "heat gun": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "caulk gun": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "putty knife": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "paint roller": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "paintbrush": {
+      "action": "Write/Draw",
+      "style": "Tip-down stroke translation",
+      "physics": "Physics"
+    },
+    "spray can": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "ladder": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "wheelbarrow": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "shovel": {
+      "action": "Chop/Strike",
+      "style": "Overhead swing arc",
+      "physics": "Physics"
+    },
+    "rake": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "broom": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "mop": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "bucket": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "watering can": {
+      "action": "Pour",
+      "style": "Tilt rotation + liquid arc",
+      "physics": "Physics"
+    },
+    "garden hose": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "lawnmower": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "chainsaw": {
+      "action": "Spin/Drill",
+      "style": "Rapid axial rotation",
+      "physics": "Physics"
+    },
+    "jack": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "torque wrench": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "pipe wrench": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "smartphone": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "laptop": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "tablet": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "desktop computer": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "monitor": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "keyboard": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "printer": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "scanner": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "camera": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "video camera": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "television": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "remote control": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "radio": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "speaker": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "headphones": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "earbuds": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "microphone": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "smartwatch": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "calculator": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "alarm clock": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "clock": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "washing machine": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "dryer": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "refrigerator": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "microwave": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "toaster": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "oven": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "dishwasher": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "air conditioner": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "fan": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "ceiling fan": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "vacuum cleaner": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "iron": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "hair dryer": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "blender": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "mixer": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "coffee machine": {
+      "action": "Drip",
+      "style": "Droplet detach + fall",
+      "physics": "Physics"
+    },
+    "kettle": {
+      "action": "Pour",
+      "style": "Tilt rotation + liquid arc",
+      "physics": "Physics"
+    },
+    "lamp": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "flashlight": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "light bulb": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "power outlet": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "extension cord": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "battery": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "solar panel": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "game console": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "joystick": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "vr headset": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "projector": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "telephone": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "fax machine": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "gps device": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "drone controller": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "walkie talkie": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "pager": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "chair": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "sofa": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "armchair": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "recliner": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "bed": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "bunk bed": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "crib": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "hammock": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "desk": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "table": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "dining table": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "coffee table": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "bookshelf": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "cabinet": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "wardrobe": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "dresser": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "nightstand": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "chest of drawers": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "door": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "window": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "curtain": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "blind": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "rug": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "cushion": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "pillow": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "blanket": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "mirror": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "picture frame": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "chandelier": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "floor lamp": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "ceiling light": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "candle holder": {
+      "action": "Flicker",
+      "style": "Vertical flame distortion",
+      "physics": "Physics"
+    },
+    "vase": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "plant pot": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "telephone table": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "bar stool": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "bench": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "footstool": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "beanbag": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "swing seat": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "rocking chair": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "t-shirt": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "shirt": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "jacket": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "coat": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "hoodie": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "sweater": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "dress": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "skirt": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "pants": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "jeans": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "shorts": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "underwear": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "socks": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "stockings": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "tights": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "shoe": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "boot": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "sandal": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "sneaker": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "heel": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "hat": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "cap": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "beanie": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "helmet": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "crown": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "tiara": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "sunglasses": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "eyeglasses": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "scarf": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "gloves": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "mittens": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "belt": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "tie": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "bow tie": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "backpack": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "handbag": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "purse": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "wallet": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "watch": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "ring": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "necklace": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "bracelet": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "earring": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "brooch": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "umbrella": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "cane": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "suitcase": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "briefcase": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "soccer ball": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "basketball": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "football": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "baseball": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "tennis ball": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "golf ball": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "volleyball": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "rugby ball": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "cricket ball": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "bowling ball": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "hockey puck": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "frisbee": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "dart": {
+      "action": "Stab/Thrust",
+      "style": "Linear thrust + retract",
+      "physics": "Physics"
+    },
+    "arrow": {
+      "action": "Stab/Thrust",
+      "style": "Linear thrust + retract",
+      "physics": "Physics"
+    },
+    "baseball bat": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "cricket bat": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "golf club": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "tennis racquet": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "hockey stick": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "lacrosse stick": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "badminton racket": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "paddle": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "oar": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "dumbbell": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "barbell": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "kettlebell": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "jump rope": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "hula hoop": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "surfboard": {
+      "action": "Float",
+      "style": "Bobbing on water surface",
+      "physics": "Physics"
+    },
+    "snowboard": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "ski": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "ice skate": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "roller skate": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "bicycle helmet": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "boxing glove": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "punching bag": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "trophy": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "medal": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "stopwatch": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "guitar": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "bass guitar": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "electric guitar": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "ukulele": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "banjo": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "violin": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "cello": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "double bass": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "piano": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "organ": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "accordion": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "drums": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "snare drum": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "bass drum": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "bongo": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "djembe": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "xylophone": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "marimba": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "glockenspiel": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "trumpet": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "trombone": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "tuba": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "french horn": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "saxophone": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "clarinet": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "flute": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "oboe": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "bassoon": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "recorder": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "harmonica": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "bagpipe": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "harp": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "sitar": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "didgeridoo": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "steel drum": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "tambourine": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "maraca": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "castanets": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "triangle": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "tree": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "oak tree": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "pine tree": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "palm tree": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "willow tree": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "cherry blossom tree": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "cactus": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "bush": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "flower": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "rose": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "sunflower": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "tulip": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "daisy": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "orchid": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "lily": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "dandelion": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "grass": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "wheat": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "bamboo": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "seaweed": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "vine": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "fern": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "moss": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "leaf": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "petal": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "seed": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "snowflake": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "feather": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "tumbleweed": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "campfire": {
+      "action": "Flicker",
+      "style": "Vertical flame distortion",
+      "physics": "Physics"
+    },
+    "bonfire": {
+      "action": "Flicker",
+      "style": "Vertical flame distortion",
+      "physics": "Physics"
+    },
+    "candle": {
+      "action": "Flicker",
+      "style": "Vertical flame distortion",
+      "physics": "Physics"
+    },
+    "torch": {
+      "action": "Flicker",
+      "style": "Vertical flame distortion",
+      "physics": "Physics"
+    },
+    "waterfall": {
+      "action": "Drip",
+      "style": "Droplet detach + fall",
+      "physics": "Physics"
+    },
+    "geyser": {
+      "action": "Drip",
+      "style": "Droplet detach + fall",
+      "physics": "Physics"
+    },
+    "volcano": {
+      "action": "Explode",
+      "style": "Radial burst particles",
+      "physics": "Physics"
+    },
+    "iceberg": {
+      "action": "Float",
+      "style": "Bobbing on water surface",
+      "physics": "Physics"
+    },
+    "glacier": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "cave": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "stalactite": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "crystal": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "gemstone": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "rock": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "pebble": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "sand dune": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "idle": {
+      "action": "Float",
+      "style": "Bobbing on water surface",
+      "physics": "Physics"
+    },
+    "bubble": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "puddle": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "pond": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "river": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "star": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Non-Physics"
+    },
+    "moon": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Non-Physics"
+    },
+    "sun": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Non-Physics"
+    },
+    "cloud": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "rain": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "rainbow": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Non-Physics"
+    },
+    "lightning": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Non-Physics"
+    },
+    "hurricane": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Non-Physics"
+    },
+    "tornado": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Non-Physics"
+    },
+    "planet": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Non-Physics"
+    },
+    "comet": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Non-Physics"
+    },
+    "meteor": {
+      "action": "Fly",
+      "style": "Rapid wing buzz, darting path",
+      "physics": "Non-Physics"
+    },
+    "asteroid": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Non-Physics"
+    },
+    "satellite": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Non-Physics"
+    },
+    "galaxy": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Non-Physics"
+    },
+    "aurora": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Non-Physics"
+    },
+    "nebula": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Non-Physics"
+    },
+    "black hole": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Non-Physics"
+    },
+    "flying saucer": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "house": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "apartment building": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "skyscraper": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "castle": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "palace": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "church": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "cathedral": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "mosque": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "temple": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "synagogue": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "school": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "hospital": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "library": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "museum": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "bank": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "hotel": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "restaurant": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "shop": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "market": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "stadium": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "arena": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "theater": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "cinema": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "factory": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "warehouse": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "barn": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "lighthouse": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "windmill": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "water tower": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "bridge": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "tunnel": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "dam": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "prison": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "police station": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "fire station": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "airport": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "train station": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "bus stop": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "parking garage": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "gas station": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "greenhouse": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "igloo": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "treehouse": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "tent": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "teepee": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "yurt": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "hut": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "shed": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "the eiffel tower": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "the great wall of china": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "statue of liberty": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "big ben": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "colosseum": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "taj mahal": {
+      "action": "Static",
+      "style": "Immovable scene element",
+      "physics": "Physics"
+    },
+    "head": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "face": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "eye": {
+      "action": "Blink/Flash",
+      "style": "Opacity or color flash loop",
+      "physics": "Physics"
+    },
+    "ear": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "nose": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "mouth": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "tooth": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "tongue": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "hair": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "beard": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "arm": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "hand": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "finger": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "fist": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "leg": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "foot": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "toe": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "knee": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "elbow": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "shoulder": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "brain": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "heart": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "spine": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "skull": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "sword": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "dagger": {
+      "action": "Stab/Thrust",
+      "style": "Linear thrust + retract",
+      "physics": "Physics"
+    },
+    "spear": {
+      "action": "Stab/Thrust",
+      "style": "Linear thrust + retract",
+      "physics": "Physics"
+    },
+    "lance": {
+      "action": "Stab/Thrust",
+      "style": "Linear thrust + retract",
+      "physics": "Physics"
+    },
+    "bow": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "crossbow": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "shield": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "mace": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "flail": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "trident": {
+      "action": "Stab/Thrust",
+      "style": "Linear thrust + retract",
+      "physics": "Physics"
+    },
+    "katana": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "scythe": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "rifle": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "pistol": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "shotgun": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "cannon": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "bomb": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "grenade": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "missile": {
+      "action": "Fly",
+      "style": "Banking path travel",
+      "physics": "Physics"
+    },
+    "torpedo": {
+      "action": "Swim",
+      "style": "Lateral body undulation",
+      "physics": "Physics"
+    },
+    "syringe": {
+      "action": "Stab/Thrust",
+      "style": "Linear thrust + retract",
+      "physics": "Physics"
+    },
+    "stethoscope": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "bandage": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "pill": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "capsule": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "thermometer": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "wheelchair": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "crutch": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "cast": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "scalpel": {
+      "action": "Stab/Thrust",
+      "style": "Linear thrust + retract",
+      "physics": "Physics"
+    },
+    "forceps": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "microscope": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "x-ray": {
+      "action": "Pulse/Glow",
+      "style": "Radial scale or opacity oscillation",
+      "physics": "Physics"
+    },
+    "iv drip": {
+      "action": "Drip",
+      "style": "Droplet detach + fall",
+      "physics": "Physics"
+    },
+    "defibrillator": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "blood bag": {
+      "action": "Wobble",
+      "style": "Idle squish/bounce",
+      "physics": "Physics"
+    },
+    "pen": {
+      "action": "Write/Draw",
+      "style": "Tip-down stroke translation",
+      "physics": "Physics"
+    },
+    "pencil": {
+      "action": "Write/Draw",
+      "style": "Tip-down stroke translation",
+      "physics": "Physics"
+    },
+    "marker": {
+      "action": "Write/Draw",
+      "style": "Tip-down stroke translation",
+      "physics": "Physics"
+    },
+    "crayon": {
+      "action": "Write/Draw",
+      "style": "Tip-down stroke translation",
+      "physics": "Physics"
+    },
+    "eraser": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "scissors": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "stapler": {
+      "action": "Chop/Strike",
+      "style": "Overhead swing arc",
+      "physics": "Physics"
+    },
+    "paper clip": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "tape": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "book": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "notebook": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "binder": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "folder": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "envelope": {
+      "action": "Open/Close",
+      "style": "Hinge rotation",
+      "physics": "Physics"
+    },
+    "stamp": {
+      "action": "Chop/Strike",
+      "style": "Overhead swing arc",
+      "physics": "Physics"
+    },
+    "globe": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "whiteboard": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "chalkboard": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "thumbtack": {
+      "action": "Stab/Thrust",
+      "style": "Linear thrust + retract",
+      "physics": "Physics"
+    },
+    "rubber band": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "paper": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "sticky note": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "knife": {
+      "action": "Chop/Strike",
+      "style": "Overhead swing arc",
+      "physics": "Physics"
+    },
+    "fork": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "spoon": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "chopsticks": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "spatula": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "ladle": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "whisk": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "rolling pin": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "cutting board": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "pot": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "pan": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "wok": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "bowl": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "plate": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "cup": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "glass": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "colander": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "grater": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "peeler": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "can opener": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "bottle opener": {
+      "action": "Swing",
+      "style": "Pendulum arc",
+      "physics": "Physics"
+    },
+    "corkscrew": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "timer": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "apron": {
+      "action": "Sway",
+      "style": "Wind oscillation, base fixed",
+      "physics": "Physics"
+    },
+    "oven mitt": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "toothpick": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "teddy bear": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "doll": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "action figure": {
+      "action": "Walk",
+      "style": "Cyclic leg gait, body bob",
+      "physics": "Physics"
+    },
+    "puppet": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "yo-yo": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "top": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "spinning wheel": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "kite": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "boomerang": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "ball": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "balloon": {
+      "action": "Float",
+      "style": "Slow sky drift",
+      "physics": "Non-Physics"
+    },
+    "bubble wand": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "pinwheel": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "jack-in-the-box": {
+      "action": "Explode",
+      "style": "Radial burst particles",
+      "physics": "Physics"
+    },
+    "music box": {
+      "action": "Spin",
+      "style": "Continuous rotation in place",
+      "physics": "Physics"
+    },
+    "puzzle piece": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "chess piece": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "dice": {
+      "action": "Bounce",
+      "style": "Gravity arc with squash & stretch",
+      "physics": "Physics"
+    },
+    "card": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "domino": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "marble": {
+      "action": "Roll",
+      "style": "Wheel rotation along path",
+      "physics": "Physics"
+    },
+    "toy car": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "toy train": {
+      "action": "Drive",
+      "style": "Wheel rotation + translation",
+      "physics": "Physics"
+    },
+    "toy robot": {
+      "action": "Walk",
+      "style": "Mechanical stepped gait",
+      "physics": "Physics"
+    },
+    "building block": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    },
+    "rattle": {
+      "action": "Shake/Ring",
+      "style": "Rapid small position jitter",
+      "physics": "Physics"
+    },
+    "stuffed animal": {
+      "action": "Idle Pulse",
+      "style": "Subtle scale breath loop",
+      "physics": "Physics"
+    }
+  }
+}

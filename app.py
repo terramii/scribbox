@@ -22,14 +22,15 @@ load_dotenv()
 import sys
 import importlib.util
 
+my_adk_agent = None
 try:
     agent_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'my-agent', 'app', 'agent.py'))
     spec = importlib.util.spec_from_file_location("my_adk_agent", agent_path)
     my_adk_agent = importlib.util.module_from_spec(spec)
     sys.modules["my_adk_agent"] = my_adk_agent
     spec.loader.exec_module(my_adk_agent)
-    root_agent = my_adk_agent.root_agent
-    HAS_ADK_AGENT = True
+    root_agent = getattr(my_adk_agent, 'root_agent', None)
+    HAS_ADK_AGENT = (root_agent is not None)
     print("ADK Classifier agent successfully loaded using importlib!")
 except Exception as e:
     print(f"Warning: Failed to import ADK root_agent: {e}")
@@ -278,6 +279,12 @@ def get_dataset():
 @app.route('/api/physics-classes', methods=['GET'])
 def get_physics_classes():
     try:
+        json_path = os.path.join(os.path.dirname(__file__), 'data', 'sketchbox_physics_classes.json')
+        if os.path.exists(json_path):
+            with open(json_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            return jsonify(data)
+            
         import openpyxl
         excel_path = os.path.join(os.path.dirname(__file__), 'data', 'sketchbox_1000plus_dataset.xlsx')
         wb = openpyxl.load_workbook(excel_path, read_only=True, data_only=True)
@@ -308,7 +315,7 @@ def get_physics_classes():
             'classes_meta': classes_meta
         })
     except Exception as e:
-        print(f"Error reading physics classes from Excel: {e}")
+        print(f"Error reading physics classes: {e}")
         # Fallback hardcoded non-physics list if Excel read fails
         return jsonify({
             'non_physics': [
@@ -792,7 +799,16 @@ def ai_predict():
             system_instruction = getattr(my_adk_agent, 'SYSTEM_INSTRUCTION', None)
             
         if not system_instruction:
-            system_instruction = "You are a hand-drawn sketch classifier. Recommend standard or custom class names, actions, and physics template style."
+            system_instruction = """You are the Sketchbox AI Scanner.
+You analyze hand-drawn sketches along with their geometric features.
+Identify the object drawn and recommend the best action and physical movement style.
+You MUST respond in JSON format matching this schema:
+{
+  "class": "lowercase_standard_or_custom_class",
+  "action": "Recommended Action Name",
+  "style": "float | bounce | spin | drive | sway | pulse | jiggle"
+}
+"""
 
         prompt = f"""Analyze the hand-drawn sketch.
 Here are the geometric features extracted from the user's sketch:
@@ -804,6 +820,13 @@ Here is the current database of trained class prototypes (with their average fea
 Please combine your visual understanding of the sketch image with the geometric features listed above. 
 If the user's sketch features align closely with a trained prototype (especially user-trained custom classes), recommend that class.
 Identify the object, select/create a custom action, and map it to the closest physical template style.
+You MUST respond in JSON format matching this schema:
+{{
+  "class": "lowercase_standard_or_custom_class",
+  "action": "Recommended Action Name",
+  "style": "float | bounce | spin | drive | sway | pulse | jiggle"
+}}
+Do not include any extra text, only the raw JSON.
 """
         image_bytes = base64.b64decode(image_b64)
         
@@ -858,9 +881,9 @@ def scribbie_support():
         else:
             client = genai.Client()
             
-        run_wf_stream = getattr(my_adk_agent, 'run_scribbie_workflow_stream', None)
+        run_wf_stream = getattr(my_adk_agent, 'run_scribbie_workflow_stream', None) if my_adk_agent else None
         if not run_wf_stream:
-            run_wf = getattr(my_adk_agent, 'run_scribbie_workflow', None)
+            run_wf = getattr(my_adk_agent, 'run_scribbie_workflow', None) if my_adk_agent else None
             if run_wf:
                 def fallback_generator():
                     text = run_wf(client, query, history)
