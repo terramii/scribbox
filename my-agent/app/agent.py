@@ -393,6 +393,33 @@ Scribbie Response:"""
         print(f"Error in run_scribbie_workflow_stream: {e}")
         err_msg = str(e)
         if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg or "quota" in err_msg.lower():
+            import time
+            # Fallback 1: If it's a greeting, return a standard friendly greeting
+            if is_greeting:
+                greeting_reply = "Hello there! 🌟 I'm Scribbie, your friendly drawing guide! 🎨✨ What fun things would you like to learn how to draw today? ✏️🌈"
+                for i in range(0, len(greeting_reply), 15):
+                    yield greeting_reply[i:i+15]
+                    time.sleep(0.01)
+                return
+                
+            # Fallback 2: If we matched a local guide, return the guide directly from cache
+            if best_match and best_match in DRAWING_GUIDES:
+                guide_info = DRAWING_GUIDES[best_match]
+                offline_reply = f"""Oh, I'd love to help you draw a **{best_match}**! 🎨✨ (Local Cache Mode)
+
+Here are the step-by-step instructions:
+{guide_info['guide']}
+
+💡 **Pro Tips:**
+{guide_info['tips']}
+
+You did it! Now you have a wonderful drawing! 🌟🎉 Happy sketching! ✏️✨"""
+                chunk_size = 15
+                for i in range(0, len(offline_reply), chunk_size):
+                    yield offline_reply[i:i+chunk_size]
+                    time.sleep(0.01)
+                return
+                
             yield "Oh no! Scribbie's coloring pencils are a bit warm from all this drawing! 🖍️🔥 Let's take a quick 10-second breather, and then we can get right back to sketching! Sparkle on! 🌟🎨"
         elif "blocked" in err_msg.lower() or "safety" in err_msg.lower():
             yield "Oops! Scribbie can only draw safe and happy things! Let's choose another fun drawing project to work on together! 🌈🎨"
