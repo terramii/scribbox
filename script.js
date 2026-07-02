@@ -2372,7 +2372,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const destX = Math.max(0, (maxW - drawW) / 2);
           const destY = Math.max(0, (maxH - drawH) / 2);
 
-          saveState();
+           saveState();
+          wbCtx.globalCompositeOperation = 'source-over';
           wbCtx.drawImage(obj.canvas, destX, destY, drawW, drawH);
           
           wbTip.classList.add('fade-out');
