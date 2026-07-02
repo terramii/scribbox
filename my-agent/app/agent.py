@@ -144,31 +144,44 @@ Always:
 4. Keep your response warm, friendly, and brief (2–3 sentences max).
 """
 
-decline_agent = Agent(
-    name="decline_agent",
-    model=Gemini(model="gemini-2.5-flash"),
-    instruction=DECLINE_INSTRUCTION,
-    description="Politely declines to answer any questions unrelated to drawing, sketching, or basic arts."
-)
-
 SCRIBBIE_INSTRUCTION = """You are Scribbie, the friendly support representative for Scribbox.
 Your role is to classify whether the user query is related to drawing, sketching, or arts guidance.
 If it IS related, transfer to the `drawing_faq_agent`.
 If it is NOT related, transfer to the `decline_agent`.
 """
 
-scribbie_agent = Agent(
-    name="scribbie",
-    model=Gemini(model="gemini-2.5-flash"),
-    instruction=SCRIBBIE_INSTRUCTION,
-    description="Scribbox customer support and drawing assistant. Classifies queries and routes to specialists.",
-    sub_agents=[drawing_faq_agent, decline_agent]
-)
+if HAS_ADK:
+    drawing_faq_agent = Agent(
+        name="drawing_faq_agent",
+        model=Gemini(model="gemini-2.5-flash"),
+        instruction=DRAWING_FAQ_INSTRUCTION,
+        description="Guides beginners on how to draw basic shapes, lines, shading, proportions, animals, etc."
+    )
 
-scribbie_app = App(
-    root_agent=scribbie_agent,
-    name="scribbox_support_app",
-)
+    decline_agent = Agent(
+        name="decline_agent",
+        model=Gemini(model="gemini-2.5-flash"),
+        instruction=DECLINE_INSTRUCTION,
+        description="Politely declines to answer any questions unrelated to drawing, sketching, or basic arts."
+    )
+
+    scribbie_agent = Agent(
+        name="scribbie",
+        model=Gemini(model="gemini-2.5-flash"),
+        instruction=SCRIBBIE_INSTRUCTION,
+        description="Scribbox customer support and drawing assistant. Classifies queries and routes to specialists.",
+        sub_agents=[drawing_faq_agent, decline_agent]
+    )
+
+    scribbie_app = App(
+        root_agent=scribbie_agent,
+        name="scribbox_support_app",
+    )
+else:
+    drawing_faq_agent = None
+    decline_agent = None
+    scribbie_agent = None
+    scribbie_app = None
 
 
 # ===========================================================================
