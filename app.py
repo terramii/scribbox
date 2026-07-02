@@ -915,7 +915,8 @@ def scribbie_support():
                 return Response(fallback_generator(), mimetype='text/event-stream')
             else:
                 def error_generator():
-                    err_msg = f"Scribbie drawing support is currently unavailable. Import error: {IMPORT_ERROR}. Trace: {IMPORT_ERROR_TRACE}" if IMPORT_ERROR else "Scribbie drawing support is currently unavailable."
+                    agent_status = "my_adk_agent is None" if not my_adk_agent else f"my_adk_agent is loaded, but run_scribbie_workflow_stream is missing. Attributes: {list(dir(my_adk_agent))}"
+                    err_msg = f"Scribbie drawing support is currently unavailable. Status: {agent_status}. Import error: {IMPORT_ERROR}. Trace: {IMPORT_ERROR_TRACE}"
                     yield f"data: {json.dumps({'error': err_msg})}\n\n"
                 return Response(error_generator(), mimetype='text/event-stream')
         

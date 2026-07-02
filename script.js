@@ -411,6 +411,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let isDrawing = false;
   let drawTool = 'brush'; // 'brush' or 'eraser'
   let drawColor = '#000000';
+  let penSize = 5;
+  let eraserSize = 20;
   let drawSize = 5;
   let lastX = 0;
   let lastY = 0;
@@ -866,18 +868,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Whiteboard Cursor Helper ---
   function updateWhiteboardCursor() {
+    const size = Math.max(6, drawSize);
+    const radius = drawSize / 2;
+    const center = size / 2;
+    
     if (drawTool === 'eraser') {
-      wbCanvas.style.cursor = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><rect x='3' y='3' width='14' height='14' fill='none' stroke='%23ffffff' stroke-width='3' rx='2'/><rect x='3' y='3' width='14' height='14' fill='none' stroke='%23111827' stroke-width='1.5' rx='2'/></svg>") 10 10, cell`;
+      const half = drawSize / 2;
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}' viewBox='0 0 ${size} ${size}'>
+        <rect x='${center - half}' y='${center - half}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23ffffff' stroke-width='1.5'/>
+        <rect x='${center - half}' y='${center - half}' width='${drawSize}' height='${drawSize}' fill='none' stroke='%23111827' stroke-width='0.5'/>
+      </svg>`;
+      wbCanvas.style.cursor = `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}") ${center} ${center}, cell`;
     } else {
-      wbCanvas.style.cursor = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><circle cx='8' cy='8' r='3.5' fill='%23ffffff'/><circle cx='8' cy='8' r='2' fill='%23111827'/></svg>") 8 8, crosshair`;
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}' viewBox='0 0 ${size} ${size}'>
+        <circle cx='${center}' cy='${center}' r='${radius}' fill='none' stroke='%23ffffff' stroke-width='1.5'/>
+        <circle cx='${center}' cy='${center}' r='${radius}' fill='none' stroke='%23111827' stroke-width='0.5'/>
+      </svg>`;
+      wbCanvas.style.cursor = `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}") ${center} ${center}, crosshair`;
     }
   }
 
   // --- Toolbar Controls ---
+  function updateSizeSlider() {
+    if (drawTool === 'brush') {
+      brushSizeInput.value = penSize;
+      brushSizeVal.textContent = `${penSize}px`;
+      drawSize = penSize;
+    } else {
+      brushSizeInput.value = eraserSize;
+      brushSizeVal.textContent = `${eraserSize}px`;
+      drawSize = eraserSize;
+    }
+  }
+
   brushTool.addEventListener('click', () => {
     drawTool = 'brush';
     brushTool.classList.add('active');
     eraserTool.classList.remove('active');
+    updateSizeSlider();
     updateWhiteboardCursor();
   });
 
@@ -885,12 +913,20 @@ document.addEventListener('DOMContentLoaded', () => {
     drawTool = 'eraser';
     eraserTool.classList.add('active');
     brushTool.classList.remove('active');
+    updateSizeSlider();
     updateWhiteboardCursor();
   });
 
   brushSizeInput.addEventListener('input', (e) => {
-    drawSize = parseInt(e.target.value);
-    brushSizeVal.textContent = `${drawSize}px`;
+    const val = parseInt(e.target.value);
+    if (drawTool === 'brush') {
+      penSize = val;
+    } else {
+      eraserSize = val;
+    }
+    drawSize = val;
+    brushSizeVal.textContent = `${val}px`;
+    updateWhiteboardCursor();
   });
 
   colorBtns.forEach(btn => {
@@ -901,6 +937,7 @@ document.addEventListener('DOMContentLoaded', () => {
       drawTool = 'brush';
       brushTool.classList.add('active');
       eraserTool.classList.remove('active');
+      updateSizeSlider();
       updateWhiteboardCursor();
     });
   });
