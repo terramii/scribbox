@@ -106,8 +106,13 @@ DEFAULT_PROTOTYPES = {
 }
 
 # ----------------- Database Configuration & Adapters -----------------
-import psycopg2
-import psycopg2.extras
+try:
+    import psycopg2
+    import psycopg2.extras
+    HAS_POSTGRES = True
+except ImportError as e:
+    HAS_POSTGRES = False
+    print(f"Warning: Failed to import psycopg2: {e}")
 
 DATABASE_URL = os.environ.get("DATABASE_URL") or os.environ.get("POSTGRES_URL")
 
@@ -185,19 +190,25 @@ class DbConnectionWrapper:
         self.conn.__exit__(exc_type, exc_val, exc_tb)
 
 def get_db():
-    if DATABASE_URL:
-        url = DATABASE_URL
-        if url.startswith("postgres://"):
-            url = url.replace("postgres://", "postgresql://", 1)
-        conn = psycopg2.connect(url, cursor_factory=psycopg2.extras.DictCursor)
-        return DbConnectionWrapper(conn, is_postgres=True)
-    else:
-        conn = sqlite3.connect(DATABASE)
-        conn.row_factory = sqlite3.Row
+    if DATABASE_URL and HAS_POSTGRES:
+        try:
+            url = DATABASE_URL
+            if url.startswith("postgres://"):
+                url = url.replace("postgres://", "postgresql://", 1)
+            conn = psycopg2.connect(url, cursor_factory=psycopg2.extras.DictCursor)
+            return DbConnectionWrapper(conn, is_postgres=True)
+        except Exception as pg_err:
+            print(f"Warning: Failed to connect to Postgres, falling back to SQLite: {pg_err}")
+            
+    conn = sqlite3.connect(DATABASE)
+    conn.row_factory = sqlite3.Row
+    try:
         # Enable WAL mode for better concurrency and larger write support
         conn.execute('PRAGMA journal_mode=WAL')
         conn.execute('PRAGMA synchronous=NORMAL')
-        return DbConnectionWrapper(conn, is_postgres=False)
+    except Exception:
+        pass
+    return DbConnectionWrapper(conn, is_postgres=False)
 
 def init_db():
     with get_db() as conn:
